@@ -1,0 +1,44 @@
+/**** DEFAULTS ****/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif; /* add google fonts */
+    font-size: 20px;  /* 1rem will equal this now */
+    line-height: 1.6;
+}
+
+/**** PAGES ****/
+.page{
+    display: none;
+    width: 100%;
+    min-height: 100%; /* allow for content off the bottom of the page */
+    padding: 1rem 2rem;
+    position: absolute;  /* or absolute if the user needs to scroll for more content */
+}
+.active{
+    display: block; 
+}
+#home{
+    background-color: hsl(60, 50%, 80%);
+}
+#about{
+    background-color: hsl(180, 50%, 80%);
+}
+#services{
+    background-color: hsl(240, 50%, 80%);
+}
+#contact{
+    background-color: hsl(380, 50%, 80%);
+}
+h2{
+    font-size: 2rem;
+    font-weight: 600;
+    transition: all 0.4s;
+}
+.big{
+    font-size: 2.5rem;
+    font-weight: 900;
+}
