@@ -9,71 +9,55 @@
     <!--  -->
 </head>
 <body>
-    <main>
+    
 
-        <!-- ABOUT-->
-        <div class="page" id="about">
-            <div class="grid-container">
+     
+    <div class="grid-container">
 
-                <h2>o Pavlíně</h2>
-                <div class="nav">
-                        
-                    <div class="a"><a href="index.html" data-target="home" class="nav-link">Domů</a></div>
-                    <div class="b"><a href="#" data-target="contact" class="nav-link">o Pavlíně</a></div>
-                    <div class="c"><a href="services.html" data-target="services" class="nav-link">Služby</a></div>
-                    <div class="d"><a href="contact.html" data-target="contact" class="nav-link">Kontakt</a></div>
-                
-                </div>
-                <div class="about-body">
-                    <div class="text-profile">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                           Odio provident sed itaque, totam consectetur et labore assumenda asperiores ea aspernatur nobis, 
-                           incidunt facere. Asperiores natus aliquid itaque optio quis illum.
-                        </p>
-                    </div>
-                    <div class="img-profile">
-                        <img src="http://via.placeholder.com/140x100">
-                    </div>
-                   
-                </div>
-
-
-            </div>
-        </div>
-
-         <!-- HAMBURGER MENU -->
-         <nav role="navigation">
+        <header class="header">  
+            <nav role="navigation">
                 <div id="menuToggle">
-                  <!--
-                  A fake / hidden checkbox is used as click reciever,
-                  so you can use the :checked selector on it.
-                  -->
-                  <input type="checkbox" />
-                  
-                  <!--
-                  Some spans to act as a hamburger.
-                  
-                  They are acting like a real hamburger,
-                  not that McDonalds stuff.
-                  -->
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                  
-                  <!--
-                  Too bad the menu has to be inside of the button
-                  but hey, it's pure CSS magic.
-                  -->
-                  <ul id="menu">
-                    <a href="index.html"><li>Domů</li></a>
-                    <a href="#"><li>o Pavlíně</li></a>
-                    <a href="services.html"><li>Služby</li></a>
-                    <a href="about.html"><li>Kontakt</li></a>
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
                     
-                  </ul>
+                    <!--
+                    Some spans to act as a hamburger menu.
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <!--
+                    The menu has to be inside of the button.
+                    -->
+                    <ul id="menu">
+                        <a href="index.html"><li>Domů</li></a>
+                        <a href="about.html"><li>o Pavlíně</li></a>
+                        <a href="services.html"><li>Služby</li></a>
+                        <a href="contact.html"><li>Kontakt</li></a>
+                    
+                    </ul>
                 </div>
-              </nav>
-
-    </main>
+            </nav>
+        </header>
+    
+        <div class="about-body">
+            <div class="text-profile">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Odio provident sed itaque, totam consectetur et labore assumenda asperiores ea aspernatur nobis, 
+                    incidunt facere. Asperiores natus aliquid itaque optio quis illum.
+                </p>
+            </div>
+            <div class="img-profile">
+                <img src="http://via.placeholder.com/140x100">
+            </div>
+            
+        </div>
+    </div>
+        
+    
 </body>
 </html>
