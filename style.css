@@ -38,7 +38,7 @@ body {
     top: 0;
     right: 0;
     padding-bottom: 100%;
-    border: 2px solid red;
+    
     z-index: 1;
     
     -webkit-user-select: none;
@@ -125,8 +125,6 @@ body {
    
   
 #menu{
-   
-    border: 2px solid green;
     position: relative;
     width: 300px;
     margin: -100px 0 0 0;
