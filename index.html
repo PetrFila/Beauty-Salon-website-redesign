@@ -11,62 +11,55 @@
 <body>
     <main>
 
-        <!-- HOME-->
-        <div class="page active" id="home">
-            <div class="grid-container">
-                
-                <h2>Domů</h2>
-                <div class="nav">
-                
-                    <div class="a"><a href="about.html" data-target="contact" class="nav-link">Domů</a></div>
-                    <div class="b"><a href="about.html" data-target="about" class="nav-link">o Pavlíně</a></div>
-                    <div class="c"><a href="services.html" data-target="services" class="nav-link">Služby</a></div>
-                    <div class="d"><a href="about.html" data-target="contact" class="nav-link">Kontakt</a></div>
-                
+    <div class="grid-container">
+        
+        <header class="header">  
+            <nav role="navigation">
+                <div id="menuToggle">
+                    <!--
+                    A fake / hidden checkbox is used as click reciever,
+                    so you can use the :checked selector on it.
+                    -->
+                    <input type="checkbox" />
+                    
+                    <!--
+                    Some spans to act as a hamburger menu.
+                    -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    
+                    <!--
+                    The menu has to be inside of the button.
+                    -->
+                    <ul id="menu">
+                        <a href="index.html"><li>Domů</li></a>
+                        <a href="about.html"><li>o Pavlíně</li></a>
+                        <a href="services.html"><li>Služby</li></a>
+                        <a href="contact.html"><li>Kontakt</li></a>
+                    
+                    </ul>
                 </div>
-                <div class="home-body">
-                    <div class="container-body">
-                        <h1>Pavlína Heyduková</h1>
-                        <div class="logo"><p>Some logo will be here which I need to create</p></div>
-                        <img src="https://anhbag.dm.files.1drv.com/y4m5XfcimwgMeJNqluKIVvp19BsYLHnmFEqr6F_uDS0ZkI11ZKTyAQVzXwpWUKZLLmNq9c9ZhzUS9FGDjWd2hdiZ7QQwJQHk_As9LLbWZPYTOqUdVDvCNZtg7CXwFQau5C0shKn9LsBc3L89eXQAnA73AtFneAgIutaN1tuJ-C9cPbYqrxSDFWQSUgEDUfX7TvMK0AmN2OjK5-TP3mU4fzuhQ?width=771&height=537&cropmode=none"/>
-                    </div>
-                </div>
+            </nav>
+        </header>
 
+
+
+        
+
+
+
+        <div class="home-body">
+            <div class="container-body">
+                <h1>Pavlína Heyduková</h1>
+                <div class="logo"><p>Some logo will be here which I need to create</p></div>
+                <img src="https://anhbag.dm.files.1drv.com/y4m5XfcimwgMeJNqluKIVvp19BsYLHnmFEqr6F_uDS0ZkI11ZKTyAQVzXwpWUKZLLmNq9c9ZhzUS9FGDjWd2hdiZ7QQwJQHk_As9LLbWZPYTOqUdVDvCNZtg7CXwFQau5C0shKn9LsBc3L89eXQAnA73AtFneAgIutaN1tuJ-C9cPbYqrxSDFWQSUgEDUfX7TvMK0AmN2OjK5-TP3mU4fzuhQ?width=771&height=537&cropmode=none"/>
             </div>
         </div>
 
-        <!-- HAMBURGER MENU -->
-        <nav role="navigation">
-            <div id="menuToggle">
-              <!--
-              A fake / hidden checkbox is used as click reciever,
-              so you can use the :checked selector on it.
-              -->
-              <input type="checkbox" />
-              
-              <!--
-              Some spans to act as a hamburger.
-              
-              They are acting like a real hamburger,
-              not that McDonalds stuff.
-              -->
-              <span></span>
-              <span></span>
-              <span></span>
-              
-              <!--
-              Too bad the menu has to be inside of the button
-              but hey, it's pure CSS magic.
-              -->
-              <ul id="menu">
-                <a href="#"><li>Domů</li></a>
-                <a href="about.html"><li>o Pavlíně</li></a>
-                <a href="services.html"><li>Služby</li></a>
-                <a href="contact.html"><li>Kontakt</li></a>
-                
-              </ul>
-            </div>
-          </nav>
+    </div>
+       
+     
        
     </main>
  
