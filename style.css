@@ -152,8 +152,8 @@ body {
     }
 
 
-   .home-body, .about-body, .service-body, .contact-body {
-       margin-top: 200px;
+   .body {
+       margin-top: 100px;
    }
 }
     
