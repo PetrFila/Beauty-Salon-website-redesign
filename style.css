@@ -1,24 +1,23 @@
 body {
     font-family: "Avenir Next", "Avenir", sans-serif;
+    color: #8f9392;
 }
 
+h1 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+}
 
 @media screen and (max-width: 1300px) {
-
-
 
     body
     {
     margin: 0;
     padding: 0;
-    
-    
-    /* make it look decent enough */
     /* background: #232323; */
-    color: #cdcdcd;
     }
     .logo{
-        
         margin: 20px 0 0 20px;
     }
 
@@ -32,7 +31,7 @@ body {
 
     a:hover
     {
-    color: tomato;
+    color: pink;
     }
 
     #menuToggle
@@ -76,7 +75,7 @@ body {
     margin-bottom: 5px;
     position: relative;
    
-    background: #cdcdcd;
+    background: #8f9392;
     border-radius: 3px;
     
     z-index: 1;
@@ -151,12 +150,21 @@ body {
     transform: none;
     }
 
-
-   .body {
+    .body {
        margin-top: 100px;
    }
 }
     
+@media screen and (max-width: 771px) {
+    .h1_line_break {
+        display: block;
+    }
+    .main_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .logo{
        
