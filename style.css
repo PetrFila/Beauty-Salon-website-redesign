@@ -29,6 +29,8 @@ h1 {
 
 
 
+
+
 @media screen and (min-width: 1301px) {
     /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
@@ -92,13 +94,24 @@ h1 {
         grid-template-columns: 1;
         justify-items: center;
     }
-    /* .about-body{
-        grid-area: 3 / 1 / 4 / 3;
+    .makeup_artist_mobile {
+        display: none;
+    }
+    .body-grid {
         display: grid;
-        grid-template-columns: repeat(2, minmax(auto, 50%));
-        
-    } */
-
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+    .text-profile > p {
+        margin: 7% 0 10% 52%;
+        text-align: justify;
+        /* letter-spacing: 0.2px; */
+    }
+    .img-profile > img {
+        width: 60%;
+        height: auto;
+        margin: 10% 0 0 0;
+    } 
 }
 
 
@@ -258,6 +271,23 @@ h1 {
     margin-right: auto;
   
     }
+    .body-grid {
+        /* display: block; */
+    }
+    .text-profile, .img-profile {
+        /* display: inline-block; */
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .img-profile > img {
+        width: 100%;
+        height: auto;
+    }
+    .text-profile > p {
+        text-align: justify;
+        text-justify: inter-character;
+    }
 }
 
 
@@ -270,6 +300,90 @@ h1 {
         width: 100%;
         height: auto;
     }
+    
+     
+}
+
+@media screen and (min-width: 700px) {
+    .body-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+    .text-profile > p {
+        margin: 7% 0 10% 30%;
+        text-align: justify;
+        text-justify: inter-character;
+        /* letter-spacing: 0.2px; */
+    }
+    .img-profile > img {
+        width: 70%;
+        height: auto;
+        margin: 10% 0 0 0;
+    } 
+}
+
+@media screen and (min-width: 601px) {
+    .body-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+    .text-profile > p {
+        margin: 7% 0 10% 20%;
+        text-align: justify;
+        text-justify: inter-character;
+        /* letter-spacing: 0.2px; */
+    }
+    .img-profile > img {
+        width: 62%;
+        height: auto;
+        margin: 10% 0 0 0;
+    } 
+}
+
+@media screen and (min-width: 600px) {
+    .body-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+    }
+    .text-profile > p {
+        margin: 7% 0 10% 20%;
+        text-align: justify;
+        text-justify: inter-word;
+        /* letter-spacing: 0.2px; */
+    }
+    .img-profile > img {
+        width: 70%;
+        height: auto;
+        margin: 10% 0 0 0;
+    } 
+}
+
+
+
+@media screen and (max-width: 599px) {
+    .makeup_artist {
+        display: none;
+    }
+    .p_line_break {
+        display: block;
+        margin-top: 10px;
+    }
+    .makeup_artist_mobile {
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        letter-spacing: 15px;
+    }
+    
+}
+
+@media screen and (min-width: 550px) {
+    .makeup_artist_mobile {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -281,6 +395,7 @@ h1 {
     {
     transform: translate(25%, 0);
     }
+   
 }
     
 
