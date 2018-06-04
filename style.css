@@ -364,9 +364,9 @@ h1 {
 
 
 @media screen and (max-width: 599px) {
-    .makeup_artist {
+    /* .makeup_artist {
         display: none;
-    }
+    } */
     .p_line_break {
         display: block;
         margin-top: 10px;
@@ -380,9 +380,24 @@ h1 {
     
 }
 
+@media screen and (max-width: 549px) {
+    .makeup_artist {
+        display: none;
+    }
+}
+
 @media screen and (min-width: 550px) {
     .makeup_artist_mobile {
         display: none;
+    }
+}
+
+@media screen and (max-width: 501) {
+    .makeup_artist_mobile {
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        letter-spacing: 15px;
     }
 }
 
