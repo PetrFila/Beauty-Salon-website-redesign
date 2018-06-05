@@ -1,24 +1,148 @@
 body {
     font-family: "Avenir Next", "Avenir", sans-serif;
+    color: #8f9392;
+}
+
+#menuToggle input {
+    display: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+}
+
+#menu li {
+    list-style: none;
+    font-size: 22px;
+}
+
+.makeup_artist {
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 15px;
 }
 
 
+
+
+
+@media screen and (min-width: 1301px) {
+    /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
+
+    header {
+        display: grid;
+        justify-items: center;
+    }
+    .nav_container {
+        grid-area: 1 / 2 / 2 / 3;
+        
+    }
+
+    /* LOGO AND NAVIGATION BEHAVIOUR */
+
+    .logo {
+        width: 150px;
+        height: auto;
+    }
+
+    #menu {
+        margin-top: 50px;
+    }
+
+    .nav_menu {
+        display: inline-block;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 10px 20px;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: pink;
+    }
+
+    
+
+
+    /* BODY CONTAINERS */
+    .body {
+        /* Need this setup for index page body */
+        display: grid;
+        justify-items: center;
+      
+    }
+  
+    .body-grid {
+        display: grid;
+        grid-template-columns: 44%;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        /* background-color: green; */
+    }
+    .text-profile {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img-profile {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    .certificates {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .text-profile > p, .certificates > p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+
+    .gallery {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+       
+    }
+
+    .text-profile > p {
+        padding-top: 10%;
+    }
+
+    .img-profile > img {
+        margin-top: 10%;
+    }
+
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+  
+    .makeup_artist_mobile {
+        display: none;
+    }
+    
+}
+
 @media screen and (max-width: 1300px) {
-
-
 
     body
     {
     margin: 0;
     padding: 0;
-    
-    
-    /* make it look decent enough */
     /* background: #232323; */
-    color: #cdcdcd;
     }
+    
     .logo{
-        
+        width: 100px;
         margin: 20px 0 0 20px;
     }
 
@@ -32,7 +156,7 @@ body {
 
     a:hover
     {
-    color: tomato;
+    color: pink;
     }
 
     #menuToggle
@@ -76,7 +200,7 @@ body {
     margin-bottom: 5px;
     position: relative;
    
-    background: #cdcdcd;
+    background: #8f9392;
     border-radius: 3px;
     
     z-index: 1;
@@ -128,18 +252,18 @@ body {
     */
    
   
-#menu{
-    position: relative;
-    width: 300px;
-    margin: -100px 0 0 0;
-    padding: 50px;
-    padding-top: 140px;
-    padding-bottom: 800px;
-    background: #ededed;
-    list-style-type: none;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
+    #menu{
+        position: relative;
+        width: 300px;
+        margin: -100px 0 0 0;
+        padding: 50px;
+        padding-top: 140px;
+        padding-bottom: 800px;
+        background: #ededed;
+        list-style-type: none;
+        transform: translate(100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
     
     #menu li
     {
@@ -151,20 +275,152 @@ body {
     transform: none;
     }
 
-
-   .home-body, .about-body, .service-body, .contact-body {
-       margin-top: 200px;
+    .body {
+       margin-top: 100px;
    }
-}
+   .main_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+   }
+
+    .body-grid {
+    display: grid;
+    grid-template-columns: 44%;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+   
+    }
+    .text-profile {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img-profile {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    .certificates {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .text-profile > p, .certificates > p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+
+    .gallery {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
     
+    }
+
+    .text-profile > p {
+        padding-top: 10%;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+
+    .makeup_artist_mobile {
+        display: none;
+    }
+ 
+}
+
+/* iPad  */
+@media screen and (max-width: 771px) {
+    .h1_line_break {
+        display: block;
+    }
+    .main_img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* smart phones landscape mode and lower resolution */
+@media screen and (max-width: 639px) {
+    .body-grid {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .text-profile, .img-profile, .certificates {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+    .gallery {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .text-profile > p {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin: 10% 0 0 5%;
+    }
+
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+    .certificates > p, .gallery > a > img {
+        margin: 0 5% 0 5%;
+    }
+}
+
+@media screen and (max-width: 599px) {
+   
+    .p_line_break {
+        display: block;
+        margin-top: 10px;
+    }
+    .makeup_artist {
+        display: none;
+    }
+    .makeup_artist_mobile {
+        display: block;
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        letter-spacing: 15px;
+    }
+    .gallery {
+        width: 100%;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .logo{
-       
+        width: 80px;
         margin: 20px 0 0 20px;
     }
     #menuToggle input:checked ~ ul
     {
     transform: translate(25%, 0);
     }
+   
 }
-    
+
+
+
+
