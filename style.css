@@ -31,14 +31,12 @@ h1 {
 
 
 
-
+@media screen and (min-width: 1301px) {
     /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
     header {
         display: grid;
-        justify-items:  center;
-        /* background-color: bisque;
-        border: 2px solid rgb(233,171,88); */
+        justify-items: center;
     }
     .nav_container {
         grid-area: 1 / 2 / 2 / 3;
@@ -82,14 +80,6 @@ h1 {
       
     }
   
-    /* .body-grid > div {
-        border: 2px solid rgb(233,171,88);
-        border-radius: 5px;
-        background-color: rgba(233,171,88,.5);
-        padding: 1em;
-        color: #d9480f;
-    } */
-
     .body-grid {
         display: grid;
         grid-template-columns: 44%;
@@ -129,9 +119,7 @@ h1 {
     }
 
     .img-profile > img {
-        width: 90%;
-        height: auto;
-        margin-top: 20%;
+        margin-top: 10%;
     }
 
     .certificates > p, .gallery > a > img {
@@ -142,8 +130,7 @@ h1 {
         display: none;
     }
     
-
-
+}
 
 @media screen and (max-width: 1300px) {
 
@@ -153,9 +140,7 @@ h1 {
     padding: 0;
     /* background: #232323; */
     }
-    .grid-container {
-        /* margin: 50px 300px 0 300px */
-    }
+    
     .logo{
         width: 100px;
         margin: 20px 0 0 20px;
@@ -299,11 +284,62 @@ h1 {
     margin-right: auto;
   
    }
+
+    .body-grid {
+    display: grid;
+    grid-template-columns: 44%;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+   
+    }
+    .text-profile {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img-profile {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    .certificates {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .text-profile > p, .certificates > p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+
+    .gallery {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    
+    }
+
+    .text-profile > p {
+        padding-top: 10%;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin-top: 10%;
+    }
+
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+
+    .makeup_artist_mobile {
+        display: none;
+    }
  
 }
 
-
-    
+/* iPad  */
 @media screen and (max-width: 771px) {
     .h1_line_break {
         display: block;
@@ -312,13 +348,46 @@ h1 {
         width: 100%;
         height: auto;
     }
-    
-     
 }
 
+/* smart phones landscape mode and lower resolution */
+@media screen and (max-width: 639px) {
+    .body-grid {
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .text-profile, .img-profile, .certificates {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+    .gallery {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .text-profile > p {
+        width: 90%;
+        margin: 0 auto;
+    }
 
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin: 10% 0 0 5%;
+    }
 
-
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+    .certificates > p, .gallery > a > img {
+        margin: 0 5% 0 5%;
+    }
+ 
+   
+}
 
 @media screen and (max-width: 599px) {
    
@@ -357,16 +426,6 @@ h1 {
         text-align: center;
         letter-spacing: 15px;
     }
-}
-
-
-
-@media screen and (max-width: 420px) {
-       .gallery {
-        display: block;
-        margin: 0 auto;
-    }
-   
 }
 
 @media screen and (max-width: 400px) {
