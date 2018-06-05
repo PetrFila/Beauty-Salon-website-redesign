@@ -385,8 +385,6 @@ h1 {
     .certificates > p, .gallery > a > img {
         margin: 0 5% 0 5%;
     }
- 
-   
 }
 
 @media screen and (max-width: 599px) {
@@ -395,7 +393,11 @@ h1 {
         display: block;
         margin-top: 10px;
     }
+    .makeup_artist {
+        display: none;
+    }
     .makeup_artist_mobile {
+        display: block;
         margin: 20px 0;
         padding: 0;
         text-align: center;
@@ -404,27 +406,6 @@ h1 {
     .gallery {
         width: 100%;
         margin: auto;
-    }
-}
-
-@media screen and (max-width: 549px) {
-    .makeup_artist {
-        display: none;
-    }
-}
-
-@media screen and (min-width: 550px) {
-    .makeup_artist_mobile {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 501) {
-    .makeup_artist_mobile {
-        margin: 20px 0;
-        padding: 0;
-        text-align: center;
-        letter-spacing: 15px;
     }
 }
 
