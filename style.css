@@ -31,28 +31,15 @@ h1 {
 
 
 
-@media screen and (min-width: 1301px) {
-    /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1;
-     
-        /* border: 1px solid rgba(0, 0, 0, 0.8); */
-    }
+    /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
     header {
         display: grid;
-        grid-template-columns: 2;
         justify-items:  center;
+        /* background-color: bisque;
+        border: 2px solid rgb(233,171,88); */
     }
-
-    .logo_container{
-        /* border: 1px solid rgba(0, 0, 0, 0.8); */
-        grid-area: 1 / 1 / 2 / 2;
-    
-    }
-
     .nav_container {
         grid-area: 1 / 2 / 2 / 3;
         
@@ -88,32 +75,73 @@ h1 {
 
 
     /* BODY CONTAINERS */
-    .body{
-        grid-area: 2 / 1 / 3 / 2; 
+    .body {
+        /* Need this setup for index page body */
         display: grid;
-        grid-template-columns: 1;
         justify-items: center;
+      
     }
+  
+    /* .body-grid > div {
+        border: 2px solid rgb(233,171,88);
+        border-radius: 5px;
+        background-color: rgba(233,171,88,.5);
+        padding: 1em;
+        color: #d9480f;
+    } */
+
+    .body-grid {
+        display: grid;
+        grid-template-columns: 44%;
+        grid-template-rows: auto auto auto;
+        justify-content: center;
+        /* background-color: green; */
+    }
+    .text-profile {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .img-profile {
+        grid-column: 2;
+        grid-row: 1 / 3;
+    }
+    .certificates {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .text-profile > p, .certificates > p {
+        width: 80%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+
+    .gallery {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+       
+    }
+
+    .text-profile > p {
+        padding-top: 10%;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin-top: 20%;
+    }
+
+    .certificates > p, .gallery > a > img {
+        padding-top: 5%;
+    }
+  
     .makeup_artist_mobile {
         display: none;
     }
-    .body-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
-    .text-profile > p {
-        margin: 7% 0 10% 52%;
-        text-align: justify;
-        /* letter-spacing: 0.2px; */
-    }
-    .img-profile > img {
-        width: 60%;
-        height: auto;
-        margin: 10% 0 0 0;
-    } 
-}
-
+    
 
 
 
@@ -270,24 +298,8 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   
-    }
-    .body-grid {
-        /* display: block; */
-    }
-    .text-profile, .img-profile {
-        /* display: inline-block; */
-        width: 75%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .img-profile > img {
-        width: 100%;
-        height: auto;
-    }
-    .text-profile > p {
-        text-align: justify;
-        text-justify: inter-character;
-    }
+   }
+ 
 }
 
 
@@ -304,69 +316,12 @@ h1 {
      
 }
 
-@media screen and (min-width: 700px) {
-    .body-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
-    .text-profile > p {
-        margin: 7% 0 10% 30%;
-        text-align: justify;
-        text-justify: inter-character;
-        /* letter-spacing: 0.2px; */
-    }
-    .img-profile > img {
-        width: 70%;
-        height: auto;
-        margin: 10% 0 0 0;
-    } 
-}
 
-@media screen and (min-width: 601px) {
-    .body-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
-    .text-profile > p {
-        margin: 7% 0 10% 20%;
-        text-align: justify;
-        text-justify: inter-character;
-        /* letter-spacing: 0.2px; */
-    }
-    .img-profile > img {
-        width: 62%;
-        height: auto;
-        margin: 10% 0 0 0;
-    } 
-}
-
-@media screen and (min-width: 600px) {
-    .body-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        justify-items: center;
-    }
-    .text-profile > p {
-        margin: 7% 0 10% 20%;
-        text-align: justify;
-        text-justify: inter-word;
-        /* letter-spacing: 0.2px; */
-    }
-    .img-profile > img {
-        width: 70%;
-        height: auto;
-        margin: 10% 0 0 0;
-    } 
-}
 
 
 
 @media screen and (max-width: 599px) {
-    /* .makeup_artist {
-        display: none;
-    } */
+   
     .p_line_break {
         display: block;
         margin-top: 10px;
@@ -377,7 +332,10 @@ h1 {
         text-align: center;
         letter-spacing: 15px;
     }
-    
+    .gallery {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 549px) {
@@ -401,6 +359,16 @@ h1 {
     }
 }
 
+
+
+@media screen and (max-width: 420px) {
+       .gallery {
+        display: block;
+        margin: 0 auto;
+    }
+   
+}
+
 @media screen and (max-width: 400px) {
     .logo{
         width: 80px;
@@ -412,9 +380,6 @@ h1 {
     }
    
 }
-    
-
-
 
 
 
