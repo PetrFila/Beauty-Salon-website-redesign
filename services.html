@@ -52,7 +52,7 @@
         <div class="body">
             <div class="body-grid-services">
                 
-                <div class="card wedding_makeup">
+                <div id="wedding-makeup" class="card" onclick="flip()">
                     <div class="card-face front">
                         <img src="http://via.placeholder.com/140x100">
                         <p>Svatební líčení</p>
@@ -69,22 +69,25 @@
                     </div>
                     
                 </div>
-                
-                <div class="card social_events-makeup">
-                    <div class="card-img">
-                        <img src="http://via.placeholder.com/140x100">
-                    </div>
-                    <div class="card_name">
-                        <p>Líčení na společenské akce</p>
-                    </div>
-                    <div class="card_text">
-                        <p>Na slavnostní a společenské akce, plesy, firemní večírky, 
-                        sleziny, nebo maturitní ples potřebujete nejen úžasné šaty 
-                        a účes , ale také dokonalý make up, který Vám vydrží až do rána.
-                        </p>
-                    </div>
-                </div>
 
+                <div id="social_events-makeup" class="card" onclick="flip()">
+                    <div class="card-face front">
+                        <img src="http://via.placeholder.com/140x100">
+                        <p>Líčení na společenské akce</p>
+                        
+                    </div>
+                    
+                    <div class="card-face back">
+                        <p>Na slavnostní a společenské akce, plesy, firemní večírky, 
+                            sleziny, nebo maturitní ples potřebujete nejen úžasné šaty 
+                            a účes , ale také dokonalý make up, který Vám vydrží až do rána.
+                        </p>
+                      
+                    </div>
+                    
+                </div>
+                
+              
                 <div class="card makeup_courses">
                     <div class="card-img">
                         <img src="http://via.placeholder.com/140x100">
@@ -174,11 +177,11 @@
     </div>
         
    <!-- JQuery -->
-    <!-- <script
+    <script
     type="text/javascript"
     src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-    crossorigin="anonymous"></script> -->
+    crossorigin="anonymous"></script>
 
     <!-- Vanilla JS -->
     <script type="text/javascript" src = "script.js"></script> 

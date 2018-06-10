@@ -1,12 +1,3 @@
-
-var card = document.querySelector('.wedding_makeup');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('flipped');
+$('.card').click(function(){
+  $(this).toggleClass('flipped');
 });
-
-// JQuery for flipping a card
-
-// $('.button').click(function(){
-//   $('.wedding_makeup').toggleClass('flipped');
-// });
-
