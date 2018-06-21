@@ -47,34 +47,56 @@
                 </div>
             </header>
 
-        <div class="body">
+        <div class="body-contact">
+            <div class="contact-grid">
 
-            <ul class="address">
-                <li>Company name</li>
-                <li>Street</li>
-                <li>City</li>
-            </ul>
-        
-            <div class="google_map">
-                <a class="profile_pic" href="https://placeholder.com"><img src="http://via.placeholder.com/200x300"></a>
-            </div>
+                <div class="contact_form">
+                    <form action="#">
+                        <label for="contact_name">Vaše jméno a příjmení:</label>    
+                        <br>
+                        <input type="text" id="contact_name" name="name" placeholder="povinné">
+                        <span class="error">This field is required</span><br><br>
+                        
+                        <label for="contact_email">Váš e-mail:</label>
+                        <br>
+                        <input type="email" id="contact_email" name="email" placeholder="povinné">
+                        <span class="error">A valid email address is required</span><br><br>
+                        
+                        <label for="contact_message">Váš vzkaz:</label>
+                        <br>
+                        <textarea name="message" id="contact_message" cols="30" rows="10"></textarea>
+                        <span class="error">This field is required</span><br><br>
+                        
+                        <button type="submit">Odeslat</button>
+                    </form>
+                    
+                </div>
 
-            <div class="contact_form">
-                <form action="#">
-                        Vaše jméno a příjmení: *<br>
-                        <input type="text" name="name" value="povinné"><br>
-                        Váš e-mail nebo telefon: *<br>
-                        <input type="text" name="email" value="povinné"><br><br>
-                        Váš vzkaz: <br>
-                        <textarea name="message" id="" cols="30" rows="10"></textarea><br><br>
-                        <button type="submit" value="Submit">Submit</button>
-                </form>
+
+                <div class="contact_details">
+                    <ul class="address">
+                        <li>Company name</li>
+                        <li>Street</li>
+                        <li>City</li>
+                    </ul>
                 
+                    <div class="google_map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.646861732663!2d12.357460715850658!3d50.07417482228632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f69100d394ad%3A0x7b0614dffcd9779d!2sAmerick%C3%A1+132%2F22%2C+350+02+Cheb%2C+Czechia!5e0!3m2!1sen!2sau!4v1529198545950" width=150% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
 
-
+    <!-- JQuery -->
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+     <!-- script source -->
+     <script type="text/javascript" src = "script.js"></script> 
 
        
   

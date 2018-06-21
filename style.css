@@ -7,6 +7,7 @@ body {
     display: none;
 }
 
+/* INDEX PAGE name of the lady */
 h1 {
     margin: 0;
     padding: 0;
@@ -19,7 +20,7 @@ h1 {
     list-style: none;
     font-size: 22px;
 }
-
+/* INDEX PAGE under the name  */
 .makeup_artist {
     margin: 20px 0;
     padding: 0;
@@ -27,23 +28,46 @@ h1 {
     letter-spacing: 15px;
 }
 
-
+.body-grid-services {
+    width: 75%;
+    margin: 0 auto;
+}
 
 .card {
+    /* width: 75%; */
+    /* display: block; */
+    
+    /* margin: 0 auto; */
     -webkit-transition: transform 1.5s;
     -ms-transition: transform 1.5s;
     transition: transform 1.5s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
+    cursor: pointer;
+    border: solid black 1px; 
+    background-color: yellow;
 }
-
-
 
 .card-face {
     -ms-backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    
+}
+.card-face > img {
+    /* display: block; */
+    /* width: 100%; */
+    /* margin: 0 auto; */
+}
+.card-face > h3 {
+    /* position: relative; */
+    margin-top: -150px;
+    text-align: center;
+}
+.card-face > p {
+   
+    text-align: center;
 }
 
 .card.flipped {
@@ -53,49 +77,89 @@ h1 {
 }
 
 .front {
-    
+    /* display: block; */
 }
   
 .back {
     -webkit-transform: rotateY(-180deg);
     -ms-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
-    text-align: justify;
-    background-color: #f1f1f1;
+    /* text-align: justify; */
+    /* background-color: #f1f1f1; */
+    background-color: red;
 }
-
 .back > p {
+    
     width: 90%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     text-align: justify;
     text-justify:inter-character;
 }
 
-.card-img {
+#wedding-makeup > .back > p {
+    margin: -170px auto 0 auto;
+}
+#social_events-makeup > .back > p {
+    margin: -100px auto 0 auto;
+}
+#makeup_courses > .back > .text {
+    margin: -160px auto 0 auto;
+}
+#makeup_courses > .back > .price {
+    margin: 0 auto;
+}
+#photo_makeup > .back > .text {
+    margin: -150px auto 0 auto;
+}
+#photo_makeup > .back > .price {
+    margin: 0 auto;
+}
+#transformations > .back > .text {
+    margin: -550px auto 0 auto;
+}
+#transformations > .back > .price {
+    margin: 0 auto;
+}
+#gift_vouchers > .back > .text {
+    margin: -150px auto 0 auto;
+}
+
+#gift_vouchers > .back > .link {
+    margin: 0 auto;
+}
+
+/* .card-img {
     display: block;
     width: 100%;
     height: auto;
     margin: 0 auto;
 }
 
-.card-img > a > img {
-    display: block;
-    margin: 0 auto;
-}
-
-.card_name > p {
-    text-align: center;
-}
 
 .content > p {
     width: 90%;
     margin: 0 auto;
     text-align: justify;
     text-justify:inter-character;
+} */
+
+/* form validation error messages and real time validation */
+.error{
+	display: none;
+}		
+.error_show{
+	color: red;
+}
+input {
+    outline: none;
+}
+input.invalid, textarea.invalid{
+	border: 2px solid red;
 }
 
-
-
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
 
 
 
@@ -151,7 +215,7 @@ h1 {
         justify-items: center;
       
     }
-  
+    /*   ABOUT PAGE */
     .body-grid {
         display: grid;
         grid-template-columns: 44%;
@@ -202,13 +266,71 @@ h1 {
         display: none;
     }
     
+    /* SERVICES PAGE */
     .body-grid-services {
         display: grid;
         grid-template-columns: auto auto auto;
-        grid-template-rows: auto auto auto;
+        /* grid-template-rows: auto auto auto; */
         grid-gap: 1em;
-        justify-content: center;
+        /* justify-content: center; */
        
+    }
+
+    /* CONTACT PAGE */
+    .contact-grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-items: center;
+        /* background-color: burlywood; */
+    }
+
+    .contact_form {
+        grid-column: 1;
+        grid-row: 1;
+        width: 80%;
+        padding: 50px 0;
+        background-color: #eee;
+
+    }
+    form {
+        /* background-color: coral; */
+    }
+    .contact_details {
+        grid-column: 2;
+        grid-row: 1;
+        /* background-color: cadetblue; */
+    }
+
+    input, textarea {
+        margin-left: 15%;
+        border: solid #8f9392 1px;
+        font-size: 100%;
+    }
+    span {
+        margin-left: 15%;
+    }
+    input, textarea {
+        width: 70%;
+    }
+    input {
+        height: 30px;
+    }
+    textarea {
+        height: 65%;
+    }
+   
+    button {
+        text-transform: uppercase;
+        padding: 10px 60px;
+        color: white;
+        background: #444;
+        font-weight: normal;
+        margin-left: 35%;
+    }
+    button:hover {
+        background-color: pink;
+        cursor: pointer;
     }
 }
 
