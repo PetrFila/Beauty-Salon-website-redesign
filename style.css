@@ -150,7 +150,7 @@ h1 {
 .error_show{
 	color: red;
 }
-input {
+input, textarea {
     outline: none;
 }
 input.invalid, textarea.invalid{
