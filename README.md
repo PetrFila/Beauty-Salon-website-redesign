@@ -1,6 +1,9 @@
 This is a small project to redesign a static website.
 
-Preview of the website:
+Current website:
+www.vizazistka-promeny.cz
+
+Preview of the new website:
 https://vizazistka-promeny.herokuapp.com/index.html
 
 
@@ -35,6 +38,8 @@ Issues:
 
 - needed to use prefix for Safari and mobile browsers
 `-webkit-backface-visibility: hidden;`
+
+- I couldn't make dotenv file work. The script reads the file .env but the credentials are wrong. 
 
 Form validation taken from this tutorial:
 https://formden.com/blog/validate-contact-form-jquery
