@@ -51,25 +51,36 @@
             <div class="contact-grid">
 
                 <div class="contact_form">
-                    <form action="mailer.php" method="post">
-                        <label for="contact_name">Vaše jméno a příjmení:</label>    
-                        <br>
-                        <input type="text" id="contact_name" name="name" placeholder="povinné">
-                        <span class="error">This field is required</span><br><br>
-                        
-                        <label for="contact_email">Váš email:</label>
-                        <br>
-                        <input type="email" id="contact_email" name="email" placeholder="povinné">
-                        <span class="error">A valid email address is required</span><br><br>
-                        
-                        <label for="contact_message">Váš vzkaz:</label>
-                        <br>
-                        <textarea name="message" id="contact_message" cols="30" rows="10"></textarea>
-                        <span class="error">This field is required</span><br><br>
-                        
-                        <button type="submit">Odeslat</button>
+                    <form id="contact" method="post" action="mailer.php">
+                        <!-- Name -->
+                        <div>
+                            <label for="contact_name">Vaše jméno a příjmení:</label>
+                            <input type="text" id="contact_name" name="name" placeholder="povinné"></input>
+                            <span class="error">Jméno musí být vyplněné</span>
+                        </div>
+                        <!-- Email -->
+                        <div>
+                            <label for="contact_email">Váš email:</label>
+                            <input type="email" id="contact_email" name="email" placeholder="povinné"></input>
+                            <span class="error">Vyžadována platná emailová adresa</span>				
+                        </div>						
+                        <!--Subject -->
+                        <div>
+                            <label for="contact_subject">Předmět:</label>
+                            <input type="text" id="contact_subject" name="subject"></input>
+                            <span class="error">Předmět musí být vyplněný</span>								
+                        </div>						
+                        <!-- Message -->
+                        <div>
+                            <label for="contact_message">Váš vzkaz:</label>
+                            <textarea id="contact_message" name="message"></textarea>
+                            <span class="error">Toto pole je povinné</span>												
+                        </div>					
+                        <!-- Submit Button -->
+                        <div id="contact_submit">				
+                            <button type="submit">Odeslat</button>
+                        </div>
                     </form>
-                    
                 </div>
 
 

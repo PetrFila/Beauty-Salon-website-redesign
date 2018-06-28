@@ -11,6 +11,16 @@ The file structure contains classic HTML,CSS,JS file structure plus additional t
 
 https://medium.com/@winnieliang/how-to-run-a-simple-html-css-javascript-application-on-heroku-4e664c541b0b
 
+Commands for direct deployment to Heroku from local terminal:
+If you have already created your Heroku app, you can easily add a remote to your local repository with the heroku git:remote command. All you need is your Heroku app’s name:
+`heroku git:remote -a app-name`
+
+To deploy your app to Heroku, you typically use the git push command to push the code from your local repository’s master branch to your heroku remote, like so:
+`git push heroku master`
+
+If you want to deploy code to Heroku from a non-master branch of your local repository (for example, testbranch), use the following syntax to ensure it is pushed to the remote’s master branch:
+`git push heroku testbranch:master`
+
 
 A command for running a PHP server localy without installing any packages just for testing sending of a form to an email:
 

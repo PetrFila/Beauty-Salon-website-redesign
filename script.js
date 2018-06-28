@@ -8,14 +8,15 @@ $(document).ready(function() {
     $(this).toggleClass('flipped');
   });
 
-  // detecting entering input
+  //Real-time Validation
+  //Name can't be blank
   $('#contact_name').on('input', function() {
     var input=$(this);
     var is_name=input.val();
     if(is_name){input.removeClass("invalid").addClass("valid");}
     else{input.removeClass("valid").addClass("invalid");}
   });
-
+  
   // Email must be an email
   $('#contact_email').on('input', function() {
     var input=$(this);
@@ -24,7 +25,16 @@ $(document).ready(function() {
     if(is_email){input.removeClass("invalid").addClass("valid");}
     else{input.removeClass("valid").addClass("invalid");}
   });
-
+  
+  // Subject can't be blank
+  $('#contact_subject').on('input', function() {
+    var input=$(this);
+    var subject=$(this).val();
+    console.log(subject);
+    if(subject){input.removeClass("invalid").addClass("valid");}
+    else{input.removeClass("valid").addClass("invalid");}	
+  });
+  
   // Message can't be blank
   $('#contact_message').keyup(function(event) {
     var input=$(this);
@@ -35,7 +45,7 @@ $(document).ready(function() {
   });
 
   // After Form Submitted Validation
-  $("button.submit").click(function(event){
+  $("#contact_submit button").click(function(event){
     var form_data=$("#contact").serializeArray();
     var error_free=true;
     for (var input in form_data){
@@ -52,4 +62,8 @@ $(document).ready(function() {
       alert('No errors: Form will be submitted');
     }
   });
+    
+    
+    
+  
 });
