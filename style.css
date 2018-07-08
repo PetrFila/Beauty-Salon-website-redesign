@@ -143,11 +143,75 @@ h1 {
     text-justify:inter-character;
 } */
 
+
+/* CONTACT PAGE grid */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    /* background-color: burlywood; */
+}
+
+.contact_details {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    background-color: cadetblue;
+}
+
+.google_map {
+    width: 100%;
+}
+
+.contact_form {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    padding: 50px 0;
+    background-color: #eee;
+
+}
+
+input, textarea {
+    margin-left: 15%;
+    border: solid #8f9392 1px;
+    font-size: 100%;
+}
+span {
+    margin-left: 15%;
+}
+input, textarea {
+    width: 70%;
+}
+input {
+    height: 30px;
+}
+textarea {
+    height: 300px;
+}
+
+button {
+    display: block;
+    padding: 10px 60px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+    background: #444;
+}
+
+button:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
 /* form validation error messages and real time validation */
 .error{
 	display: none;
 }		
-.error_show{
+.error_show, .PHPerror {
 	color: red;
 }
 input, textarea {
@@ -159,6 +223,20 @@ input.invalid, textarea.invalid{
 
 input.valid, textarea.valid{
 	border: 2px solid green;
+}
+
+.success {
+    padding: 5 5;
+    background-color: limegreen;
+    text-align: center;
+    color: white;
+}
+
+.failure {
+    padding: 5 5;
+    background-color: lightcoral;
+    text-align: center;
+    color: white;
 }
 
 
@@ -215,6 +293,11 @@ input.valid, textarea.valid{
         justify-items: center;
       
     }
+
+    #navigation {
+        display: none;
+    }
+
     /*   ABOUT PAGE */
     .body-grid {
         display: grid;
@@ -277,61 +360,12 @@ input.valid, textarea.valid{
     }
 
     /* CONTACT PAGE */
-    .contact-grid {
-        display: grid;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto auto;
-        justify-items: center;
-        /* background-color: burlywood; */
-    }
-
-    .contact_form {
-        grid-column: 1;
-        grid-row: 1;
-        width: 80%;
-        padding: 50px 0;
-        background-color: #eee;
-
-    }
-    form {
-        /* background-color: coral; */
-    }
-    .contact_details {
-        grid-column: 2;
-        grid-row: 1;
-        /* background-color: cadetblue; */
-    }
-
-    input, textarea {
-        margin-left: 15%;
-        border: solid #8f9392 1px;
-        font-size: 100%;
-    }
-    span {
-        margin-left: 15%;
-    }
-    input, textarea {
-        width: 70%;
-    }
-    input {
-        height: 30px;
-    }
-    textarea {
-        height: 65%;
-    }
+    
+    
+    
    
-    button {
-        text-transform: uppercase;
-        padding: 10px 60px;
-        color: white;
-        background: #444;
-        font-weight: normal;
-        margin-left: 35%;
-    }
-    button:hover {
-        background-color: pink;
-        cursor: pointer;
-    }
+
+    
 }
 
 @media screen and (max-width: 1300px) {
@@ -341,6 +375,10 @@ input.valid, textarea.valid{
     margin: 0;
     padding: 0;
     /* background: #232323; */
+    }
+
+    .full_menu {
+        display: none;
     }
     
     .logo{
@@ -361,122 +399,98 @@ input.valid, textarea.valid{
     color: pink;
     }
 
-    #menuToggle
-    {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding-bottom: 100%;
-    
-    z-index: 1;
-    
-    -webkit-user-select: none;
-    user-select: none;
-    }
-
-    #menuToggle input
-    {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: 30px;
-    right: 13px;
-    
-    cursor: pointer;
-    
-    opacity: 0; /*hide this*/
-    z-index: 2; /* and place it over the hamburger */
-    
-    -webkit-touch-callout: none;
-    }
-
-    #menuToggle span
-    {
-    display: block;
-    top: 40px;
-    right: -340px;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-   
-    background: #8f9392;
-    border-radius: 3px;
-    
-    z-index: 1;
-    
-    transform-origin: 4px 0px;
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-    }
-
-    #menuToggle span:first-child
-    {
-    transform-origin: 0% 0%;
-    }
-
-    #menuToggle span:nth-last-child(2)
-    {
-    transform-origin: 0% 100%;
-    }
-
-    
-    /* Transform all the slices of hamburger into a crossmark.*/
-    
-    /* the first slice turns clockwise */
-    #menuToggle input:checked ~ span
-    {
+    /* Hanburger menu */
+    .menuToggle {
+        display: block;
+        position: absolute;
+        float: right;
+        right: 40px;
+        top: 5%;
+        width: 33px;
+        height: 33px;
+        padding: 5px;
+        z-index: 1;
+        cursor: pointer;
+      }
+      
+      .menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        background: #8f9392;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: .7s ease;
+      }
+      
+      .hidden {
+        opacity: 0;
+        transition-delay: .5s;
+        pointer-events: none;
+        cursor: default;
+      }
+      
+      .visible {
         opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #232323;
-    }
-    
-    /*hide the middle one.*/
-    #menuToggle input:checked ~ span:nth-last-child(3)
-    {
+        
+      }
+      
+      /* Transform all the slices of hamburger into a crossmark */
+      .menuToggle.open span:nth-child(1) {
+        opacity: 1;
+        transform: rotate(45deg) translate(0, 13px);
+      }
+      
+      .menuToggle.open span:nth-child(2) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
-    }
-    
-    /*the last slice turns anti-clockwise.*/
-    #menuToggle input:checked ~ span:nth-last-child(2)
-    {
-        transform: rotate(-45deg) translate(0, -1px);
-    }
-    
-    /*
+      }
+      
+      .menuToggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -13px);
+      }
+      
+      /* Navigation pop up block */
+      /*
     * Make this absolute positioned
-    * at the top right of the screen
+    * at the top left of the screen
     */
-   
-  
-    #menu{
-        position: relative;
+      #navigation {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
         width: 300px;
-        margin: -100px 0 0 0;
-        padding: 50px;
+        height: 400px;
+        justify-content: center;
         padding-top: 140px;
         padding-bottom: 800px;
         background: #ededed;
         list-style-type: none;
-        transform: translate(100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    }
-    
-    #menu li
-    {
-      padding: 10px 0;
-      font-size: 22px;
-    }
-    #menuToggle input:checked ~ ul
-    {
-    transform: none;
-    }
+        font-size: 25px;
+        transition: 0.3s ease-in; 
+      }
+            
+      .slideInRight {
+        animation-duration: .5s;
+      }
+      
+      .slideOutRight {
+        animation-duration: .5s;
+      }
+      
+      ul {
+        list-style-type: none;
+      }
 
+      .nav_menu > li {
+        margin: 10% 0;
+      }
+     
+  
+      
+    /* ABOUT PAGE */
     .body {
        margin-top: 100px;
    }
@@ -538,7 +552,45 @@ input.valid, textarea.valid{
     .makeup_artist_mobile {
         display: none;
     }
+
+   
  
+}
+
+
+@media screen and (max-width: 1200px) {
+  /* CONTACT PAGE */
+
+.contact-grid {
+    display: block;
+    /* grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: center; */
+    /* background-color: burlywood; */
+}
+
+.contact_details {
+    /* grid-column: 1;
+    grid-row: 1; */
+    width: 100%;
+    padding: 0 0 90px 0;
+    background-color: cadetblue;
+}
+
+.google_map {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact_form {
+    /* grid-column: 2;
+    grid-row: 1; */
+    width: 100%;
+    padding: 50px 0;
+    background-color: #eee;
+
+}  
 }
 
 /* iPad  */

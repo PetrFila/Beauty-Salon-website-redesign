@@ -51,5 +51,5 @@ Issues:
 
 - I couldn't make dotenv file work. The script reads the file .env but the credentials are wrong. 
 
-Form validation taken from this tutorial:
+Frontend form validation taken from this tutorial:
 https://formden.com/blog/validate-contact-form-jquery

@@ -15,40 +15,52 @@
      
     <div class="grid-container">
 
-            <header class="header">
-                <div class="logo_container">
-                    <img class="logo" src="https://mu8mjq.dm.files.1drv.com/y4m5r-mTMXFaQkbQ4CBGlPU8YyJE-rWmn1L6XM-CDNBKs1fM4KsBKpLllcGyV-egnXS19kpvpmdtG2EOUV04ebgsgBiBw_OvqIlfhVTBOQW8-OEb7gIXnLcYHwGgi2T0X5cNXS5YgXyh6LI0rX6qHaMllm69VLz2k6ro0xv59dm62qOQgAqZzGTmqkClr3kp4OGr299xPGLm9vA_NyU-IVhNw?width=373&height=373&cropmode=none" /> 
-                </div>
-                <div class="nav_container"> 
-                    <nav role="navigation">
-                        <div id="menuToggle">
-                            <!--
-                            A fake / hidden checkbox is used as click reciever,
-                            so you can use the :checked selector on it.
-                            -->
-                            <input type="checkbox" />
-                            
-                            <!--
-                            Some spans to act as a hamburger menu.
-                            -->
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            
-                            <!--
-                            The menu has to be inside of the button.
-                            -->
-                            <ul id="menu">
+        <header class="header">
+            <img class="logo" src="https://mu8mjq.dm.files.1drv.com/y4m5r-mTMXFaQkbQ4CBGlPU8YyJE-rWmn1L6XM-CDNBKs1fM4KsBKpLllcGyV-egnXS19kpvpmdtG2EOUV04ebgsgBiBw_OvqIlfhVTBOQW8-OEb7gIXnLcYHwGgi2T0X5cNXS5YgXyh6LI0rX6qHaMllm69VLz2k6ro0xv59dm62qOQgAqZzGTmqkClr3kp4OGr299xPGLm9vA_NyU-IVhNw?width=373&height=373&cropmode=none" /> 
+            
+            <div class="nav_container"> 
+                <nav role="navigation">
+                    <div class="full_menu">
+                        <ul id="menu">
+                            <a class="nav_menu" href="index.html"><li>Domů</li></a>
+                            <a class="nav_menu" href="about.html"><li>O mně</li></a>
+                            <a class="nav_menu" href="services.html"><li>Služby</li></a>
+                            <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
+                        </ul>
+                    </div>
+                    <div class="menuToggle">
+                        <!--
+                        A fake / hidden checkbox is used as click reciever,
+                        so you can use the :checked selector on it.
+                        -->
+                        <!-- <input type="checkbox" /> -->
+                        
+                        <!--
+                        Some spans to act as a hamburger menu.
+                        -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <!--
+                        The menu has to be inside of the button.
+                        -->
+                        
+                    </div>
+
+                    <div id="navigation" class="hidden">
+                        <div class="nav">
+                            <ul>
                                 <a class="nav_menu" href="index.html"><li>Domů</li></a>
-                                <a class="nav_menu" href="about.html"><li>o Pavlíně</li></a>
+                                <a class="nav_menu" href="about.html"><li>O mně</li></a>
                                 <a class="nav_menu" href="services.html"><li>Služby</li></a>
-                                <a class="nav_menu" href="contact.html"><li>Kontakt</li></a>
-                            
+                                <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
                             </ul>
                         </div>
-                    </nav>
-                </div>
-            </header>
+                    </div>
+                </nav>
+            </div>
+        </header>
     
         <div class="body">
             <div class="body-grid">
@@ -86,7 +98,15 @@
             </div>
         </div>
     </div>
-        
+ 
+    <!-- JQuery -->
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+    <!-- script source -->
+    <script type="text/javascript" src = "script.js"></script>        
     
 </body>
 </html>

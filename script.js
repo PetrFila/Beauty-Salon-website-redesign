@@ -3,6 +3,30 @@
 
 $(document).ready(function() {
 
+  // hanburger menu
+  $(function() {
+    $(".menuToggle").click(function() {
+      if ($("#navigation").hasClass("hidden")) {
+        $("#navigation").attr("class", "visible animated slideInRight");
+      } else {
+        $("#navigation").attr("class", "hidden animated slideOutRight");
+      }
+      $(this).toggleClass("open");
+    });
+  
+    $("#navigation").click(function() {
+      if ($("#navigation").hasClass("visible")) {
+        $(".menuToggle").toggleClass("open");
+      } else {
+      }
+      $(this).attr("class", "slideOutRight hidden");
+    });
+  
+  });
+  
+  
+  
+  
   // cards on services page
   $('.card').click(function(){
     $(this).toggleClass('flipped');
