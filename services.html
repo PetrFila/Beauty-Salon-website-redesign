@@ -14,149 +14,174 @@
 
      
     <div class="grid-container">
-            <header class="header">
-                <div class="logo_container">
-                    <img class="logo" src="https://mu8mjq.dm.files.1drv.com/y4m5r-mTMXFaQkbQ4CBGlPU8YyJE-rWmn1L6XM-CDNBKs1fM4KsBKpLllcGyV-egnXS19kpvpmdtG2EOUV04ebgsgBiBw_OvqIlfhVTBOQW8-OEb7gIXnLcYHwGgi2T0X5cNXS5YgXyh6LI0rX6qHaMllm69VLz2k6ro0xv59dm62qOQgAqZzGTmqkClr3kp4OGr299xPGLm9vA_NyU-IVhNw?width=373&height=373&cropmode=none" /> 
-                </div>
-                <div class="nav_container"> 
-                    <nav role="navigation">
-                        <div id="menuToggle">
-                            <!--
-                            A fake / hidden checkbox is used as click reciever,
-                            so you can use the :checked selector on it.
-                            -->
-                            <input type="checkbox" />
-                            
-                            <!--
-                            Some spans to act as a hamburger menu.
-                            -->
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            
-                            <!--
-                            The menu has to be inside of the button.
-                            -->
-                            <ul id="menu">
+        <header class="header">
+            <img class="logo" src="https://mu8mjq.dm.files.1drv.com/y4m5r-mTMXFaQkbQ4CBGlPU8YyJE-rWmn1L6XM-CDNBKs1fM4KsBKpLllcGyV-egnXS19kpvpmdtG2EOUV04ebgsgBiBw_OvqIlfhVTBOQW8-OEb7gIXnLcYHwGgi2T0X5cNXS5YgXyh6LI0rX6qHaMllm69VLz2k6ro0xv59dm62qOQgAqZzGTmqkClr3kp4OGr299xPGLm9vA_NyU-IVhNw?width=373&height=373&cropmode=none" /> 
+            
+            <div class="nav_container"> 
+                <nav role="navigation">
+                    <div class="full_menu">
+                        <ul id="menu">
+                            <a class="nav_menu" href="index.html"><li>Domů</li></a>
+                            <a class="nav_menu" href="about.html"><li>O mně</li></a>
+                            <a class="nav_menu" href="services.html"><li>Služby</li></a>
+                            <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
+                        </ul>
+                    </div>
+                    <div class="menuToggle">
+                        <!--
+                        A fake / hidden checkbox is used as click reciever,
+                        so you can use the :checked selector on it.
+                        -->
+                        <!-- <input type="checkbox" /> -->
+                        
+                        <!--
+                        Some spans to act as a hamburger menu.
+                        -->
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        
+                        <!--
+                        The menu has to be inside of the button.
+                        -->
+                        
+                    </div>
+
+                    <div id="navigation" class="hidden">
+                        <div class="nav">
+                            <ul>
                                 <a class="nav_menu" href="index.html"><li>Domů</li></a>
-                                <a class="nav_menu" href="about.html"><li>o Pavlíně</li></a>
+                                <a class="nav_menu" href="about.html"><li>O mně</li></a>
                                 <a class="nav_menu" href="services.html"><li>Služby</li></a>
-                                <a class="nav_menu" href="contact.html"><li>Kontakt</li></a>
-                            
+                                <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
                             </ul>
                         </div>
-                    </nav>
-                </div>
-            </header>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
         <div class="body">
-            <div class="card">
-                <a class="wedding_makeup" href="https://placeholder.com"><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Svatební líčení</p>
+            <div class="body-grid-services">
+                
+                <div id="wedding-makeup" class="card">
+                    <div class="card-face front">
+                        <img src="https://ypadgg.dm.files.1drv.com/y4mrMDdBFFCfebAqa8zo_jnf8BTDcI9rCVCoesFYY4ucN5Amcq0py9fGoxksca9NF1lVPuMFKtmXS2m6EjR-FSpfALgGDZEphUA3R2hl6602Y6cwcX2jQZGNjIDFVAaYbBKkc0S-q8IYfwY4Dz-O-OxHVL4kwQaHlMyGn3oon-duFlRkO_J2zUldqF3N5iYhTWUisjhnYxT_HJ7ZGpEWjLRzQ?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Svatební líčení</h3>
+                        <p class="more">Více</p>
+                    </div>
+                    
+                    <div class="card-face back">
+                        <p>Začínáme zkouškou ještě před svatbou. 
+                        Společně prokonzultujeme možnosti líčení, které vhodně doplní Vaši volbu svatebních šatů a kytice. 
+                        Svatební líčení probíhá přímo u nevěsty, v kadeřnickém salonu nebo dle dohody jinde. 
+                        Možností je samozřejmě také líčení ostatních svatebčanů.
+                        </p>
+                        
+                    </div>
                 </div>
-                <div class="card_text">
-                    <p>Začínáme zkouškou ještě před svatbou. 
-                    Společně prokonzultujeme možnosti líčení, které vhodně doplní Vaši volbu svatebních šatů a kytice. 
-                    Svatební líčení probíhá přímo u nevěsty, v kadeřnickém salonu nebo dle dohody jinde. 
-                    Možností je samozřejmě také líčení ostatních svatebčanů.
-                    </p>
+                
+                <div id="social_events-makeup" class="card">
+                    <div class="card-face front">
+                        <img src="https://lffo1a.dm.files.1drv.com/y4mhu2Bb6AB3GmT1u2rE4bI4O2o8-Ma8qjFJjlmuTGEA4000ZM64tS1Gqhv1NQeEzznQkoSSapatnhc9YIaddW8q_WRGky2Kh4ZS4U-uuqX-VPx_Br0haqyyYGYx22OQ3CA5VBnF44yqTu2xENDOvWL4oR8cWwbQH3JEZ9CRAEbbBMLXoMpL2m5hGp96xc615olewsUVDZEUYvF_kpD-EjRFA?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Líčení na společenské akce</h3>
+                    </div>
+                    
+                    <div class="card-face back">
+                        <p>Na slavnostní a společenské akce, plesy, firemní večírky, 
+                            sleziny, nebo maturitní ples potřebujete nejen úžasné šaty 
+                            a účes , ale také dokonalý make up, který Vám vydrží až do rána.
+                        </p>
+                    </div>
+                    
                 </div>
-            </div>
+                
+              
+                <div id="makeup_courses" class="card">
+                    <div class="card-face front">
+                        <img src="https://ygt2dw.dm.files.1drv.com/y4mTP-VvurnwHzJIbNnwGtBBwrrR5zY1WrZQyL5nD_eN7aL9m3z93i8sWuFjydjWwgZeSK7kSFvxp-hDrshjjgP3AHlqfJO2KJlKGNGxodJODAfX-HNVoR5nL4YgKYZ-di1HEQMNlwlrmVPXVnpFxp7W65bhNy0Jv0Q9AYcxYBTxOs4EgoRnGpx98sIEr1FZclrpctu1McZPFMQv6iGn_-eBA?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Minikurzy líčení</h3>
+                    </div>
 
-            <div class="card">
-                <a class="social_events-makeup" href="https://placeholder.com"><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Líčení na společenské akce</p>
+                    <div class="card-face back">
+                        <p class="text">Už léta se líčíte stále stejně, nebo jste se rozhodla, 
+                        že se líčit začnete a nejste si jistá jak na to? 
+                        Společně najdeme vhodné líčení přímo pro vás. 
+                        Probereme vaše zásoby. Ukážu vám podrobně postup, „povedu vám ruku“ 
+                        a naučím vás pár triků. Sama zjistíte, že stačí „pár minut“ 
+                        a váš vzhled bude perfektní. Na minikurz správného líčení 
+                        s sebou můžete vzít i kamarádku!
+                        </p>
+                        <p class="price">500 Kč - cena bude presnena</p>
+                    </div>
                 </div>
-                <div class="card_text">
-                    <p>Na slavnostní a společenské akce, plesy, firemní večírky, 
-                    sleziny, nebo maturitní ples potřebujete nejen úžasné šaty 
-                    a účes , ale také dokonalý make up, který Vám vydrží až do rána.
-                    </p>
-                </div>
-            </div>
 
-            <div class="card">
-                <a class="makeup_courses" href="https://placeholder.com"><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Minikurzy líčení</p>
-                </div>
-                <div class="card_text">
-                    <p>Už léta se líčíte stále stejně, nebo jste se rozhodla, 
-                    že se líčit začnete a nejste si jistá jak na to? 
-                    Společně najdeme vhodné líčení přímo pro vás. 
-                    Probereme vaše zásoby. Ukážu vám podrobně postup, „povedu vám ruku“ 
-                    a naučím vás pár triků. Sama zjistíte, že stačí „pár minut“ 
-                    a váš vzhled bude perfektní. Na minikurz správného líčení 
-                    s sebou můžete vzít i kamarádku!
-                    </p>
-                </div>
-                <div class="price">
-                    <p>500 Kč - cena bude presnena</p>
-                </div>
-            </div>
+                <div id="photo_makeup" class="card">
+                    <div class="card-face front">
+                        <img src="https://9w2ajw.dm.files.1drv.com/y4mSc-XsTSBPXTZL6fTSSdwOWBa5JqFGrsPiDhp_aQA2r4rnNUFnJOLA3iyWDoypUOXixYvNa4P3LYQH3kRRv4GAl02C740hGVW8DXnBnh6WleCPLtroxvJBQZGXg9cmykH9-9_6JoiL8rM9Ap6BIog0z6AOCXxyV59dbn3CdsGYPh78bW0Ry3eFg5yH48EvGXHVGysKNPTA8i5iYE5u8-DMA?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Fotomake-up</h3>
+                    </div>
 
-            <div class="card">
-                <a class="photo_makeup" href="https://placeholder.com"><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Fotomake-up</p>
+                    <div class="card-face back">
+                        <p class="text">Líčení na focení v ateliéru - kalendáře, booky, prezentační fotografie, 
+                        maturitní tabla. Líčení na módních přehlídkách, promotion akcích, apod.
+                        </p>
+                        <p class="price">500 Kč - cena bude presnena</p>
+                    </div>
                 </div>
-                <div class="card_text">
-                    <p>Líčení na focení v ateliéru - kalendáře, booky, prezentační fotografie, 
-                    maturitní tabla. Líčení na módních přehlídkách, promotion akcích, apod.
-                    </p>
-                </div>
-                <div class="price">
-                    <p>500 Kč - cena bude presnena</p>
-                </div>
-            </div>
 
-            <div class="card">
-                <a class="transformations" href="https://placeholder.com"></a><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Proměny</p>
-                </div>
-                <div class="card_text">
-                <p>Pro všechny ženy, které se rozhodly, že udělají něco pro sebe, 
-                    chtějí se změnit, inspirovat a vrátit se domů jiné, nové a krásnější. 
-                    Na proměně pracuje náš tým vizážistka, kadeřnice a stylistka. 
-                    Součástí je vstupní konzultace, sestavíme plán, jak bude proměna probíhat 
-                    a vše dohodneme tak, aby jste se cítila opravdu skvěle a svůj den si užila! 
-                    Vizážistka vás naučí jak správně pečovat o pleť, jak si vybrat barvičky 
-                    a jak se líčit. Kadeřnice vám doporučí a udělá barvu vlasů a střih, 
-                    který nejlépe vyhovuje vašemu typu. Stylistka vám kromě doporučení vhodného 
-                    oblečení k vaší postavě může pomoci i při nákupu a sladění konkrétního oblečení, 
-                    kabelek, botiček a doplňků přímo v obchodech. Našim cílem je a uděláme vše pro to, 
-                    aby jste vypadala a cítila se opravdu skvěle. 
-                    </p> 
-                </div>
-                <div class="price">
-                    <a href="http://www.hanapemova.cz/"></a>
-                </div>
-            </div>
-            
-            <div class="card">
-                <a class="gift_vouchers" href="https://placeholder.com"><img src="http://via.placeholder.com/140x100"></a>
-                <div class="card_name">
-                    <p>Dárkové poukazy</p>
-                </div>
-                <div class="card_text">
-                    <p>Na vybrané služby nabízíme dárkové poukazy. 
-                    Této nabídky mohou využít také společnosti jako dárek pro svoje zaměstnance.
-                    </p>
-                </div>
-                <div class="price">
-                    <a href="#"></a> <p>Here will be links for provided services and cosmetic products</p>
-                </div>
-            </div>
+                <div id="transformations" class="card">
+                    <div class="card-face front">
+                        <img src="https://qltfva.dm.files.1drv.com/y4m7JjUEEY6sQsHUvzElHuAiLrcaasaR7zbUr5HRUwKOBa4aJdIYpOz5U1hbzBxlW7ytws4V09UUBpTx_4cZalg2Xlenj8665LJGS9a3VdNaESHgnpwDGK1UiRp3qSbuprQGaKc4PZ73OSBpw2i-WBlOe40MwaQS_f5Im-1508IS33Jg4VgztV0xZZvffLsv4nK8wCQ3uwMz3aY-Y-SD0XZ7A?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Proměny</h3>
+                    </div>
 
+                    <div class="card-face back">
+                        <p class="text">Pro všechny ženy, které se rozhodly, že udělají něco pro sebe, 
+                        chtějí se změnit, inspirovat a vrátit se domů jiné, nové a krásnější. 
+                        Na proměně pracuje náš tým vizážistka, kadeřnice a stylistka. 
+                        Součástí je vstupní konzultace, sestavíme plán, jak bude proměna probíhat 
+                        a vše dohodneme tak, aby jste se cítila opravdu skvěle a svůj den si užila! 
+                        Vizážistka vás naučí jak správně pečovat o pleť, jak si vybrat barvičky 
+                        a jak se líčit. Kadeřnice vám doporučí a udělá barvu vlasů a střih, 
+                        který nejlépe vyhovuje vašemu typu. Stylistka vám kromě doporučení vhodného 
+                        oblečení k vaší postavě může pomoci i při nákupu a sladění konkrétního oblečení, 
+                        kabelek, botiček a doplňků přímo v obchodech. Našim cílem je a uděláme vše pro to, 
+                        aby jste vypadala a cítila se opravdu skvěle. 
+                        </p> 
+                        <p class="price">Více fotografií najdete na<a href="http://www.hanapemova.cz/">www.hanapemova.cz</a></p> 
+                    </div>
+                </div>
+                
+                <div id="gift_vouchers" class="card">
+                    <div class="card-face front">
+                        <img src="https://wsqxsg.dm.files.1drv.com/y4m7eymDwApCivvH11Q7OG5iUAsCRv3ubZeMSiguOo5gaZMKg46cm_aE6CQ5skqegAhrwjw1keoONBwuDwIo5ezfWi5fsjZPtW3_1spqrK2hoe8Adnie2h-416yJvHsWoyGRoQFxq3Vklwn6OV5hPa_c53kejND8yJ_juydKwAIb0j5g9RYWZZiRRgaDcyU-N4fgVlbqduH38tqgY5BVQ3Grw?width=440&height=660&cropmode=none" width="440" height="660" />
+                        <h3>Dárkové poukazy</h3>
+                    </div>
+                    
+                    <div class="card-face back">
+                        <p class="text">Na vybrané služby nabízíme dárkové poukazy. 
+                        Této nabídky mohou využít také společnosti jako dárek pro svoje zaměstnance.
+                        </p>
+                        <a class="link" href="#">Here will be links for provided services and cosmetic products</a>
+                    </div>
+                </div>
+             
+              
+            </div>
         </div>
 
     </div>
         
+   <!-- JQuery -->
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
 
-        
+    <!-- script source -->
+    <script type="text/javascript" src = "script.js"></script> 
 
 
 
