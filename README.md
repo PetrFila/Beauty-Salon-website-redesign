@@ -51,5 +51,7 @@ Issues:
 
 - I couldn't make dotenv file work. The script reads the file .env but the credentials are wrong. 
 
+- The hamburger menu had to be completely re-done by using jQuery because the original CSS version was using a transparent div which was over contact form and submit button so they weren't accessible.
+
 Frontend form validation taken from this tutorial:
 https://formden.com/blog/validate-contact-form-jquery

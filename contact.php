@@ -29,23 +29,14 @@
                             </ul>
                         </div>
                         <div class="menuToggle">
-                            <!--
-                            A fake / hidden checkbox is used as click reciever,
-                            so you can use the :checked selector on it.
-                            -->
-                            <!-- <input type="checkbox" /> -->
                             
                             <!--
-                            Some spans to act as a hamburger menu.
+                            The spans to act as a hamburger menu.
                             -->
                             <span></span>
                             <span></span>
                             <span></span>
-                            
-                            <!--
-                            The menu has to be inside of the button.
-                            -->
-                           
+                        
                         </div>
 
                         <div id="navigation" class="hidden">
@@ -77,41 +68,41 @@
                 </div>    
             
                 <div class="contact_form">
+                    <span><?= $success ?></span>
+                    <span><?= $failure ?></span>
                     <form id="contact" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
                         <!-- Name -->
                         <div>
                             <label for="contact_name"></label>
-                            <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= $name ?>"></input>
+                            <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= post('name'); ?>"></input>
                             <span class="error">Jméno musí být vyplněné</span>
-                            <span class="PHPerror"><?= $name_error ?></span>
+                            <span class="PHPerror"><?= showError('name_error', $errors); ?></span>
                         </div>
                         <!-- Email -->
                         <div>
                             <label for="contact_email"></label>
-                            <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= $email ?>"></input>
+                            <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= post('email'); ?>"></input>
                             <span class="error">Zadaná adresa není platná</span>
-                            <span class="PHPerror"><?= $email_error ?></span>				
+                            <span class="PHPerror"><?= showError('email_error', $errors); ?></span>				
                         </div>						
                         <!--Subject -->
                         <div>
                             <label for="contact_subject"></label>
-                            <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= $subject ?>"></input>
+                            <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= post('subject'); ?>"></input>
                             <span class="error">Předmět musí být vyplněný</span>
-                            <span class="PHPerror"><?= $subject_error ?></span>								
+                            <span class="PHPerror"><?= showError('subject_error', $errors); ?></span>								
                         </div>						
                         <!-- Message -->
                         <div>
                             <label for="contact_message"></label>
-                            <textarea id="contact_message" name="message" placeholder="Váše zpráva ..." value="<?= $message ?>"></textarea>
+                            <textarea id="contact_message" name="message" placeholder="Váše zpráva ..."><?= post('message'); ?></textarea>
                             <span class="error">Toto pole je povinné</span>
-                            <span class="PHPerror"><?= $message_error ?></span>												
+                            <span class="PHPerror"><?= showError('message_error', $errors); ?></span>												
                         </div>					
                         <!-- Submit Button -->
                         <div class="submit_button">				
                             <button type="submit">Odeslat</button>
                         </div>
-                        <span><?= $success ?></span>
-                        <span><?= $failure ?></span>
                     </form>
                 </div>
 

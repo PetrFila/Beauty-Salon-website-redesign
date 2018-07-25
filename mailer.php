@@ -1,105 +1,75 @@
 <?php
-
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-$name_error = $email_error = $subject_error = $message_error = "";
-$name = $email = $subject = $message = "";
+$errors = [];
+
+function isFormSent() {
+    return !empty($_POST);
+}
+
+function showError($key, $message) {
+    return isFormSent() && isset($message[$key]) ? $message[$key] : '';
+}
+
+function post($varName) {
+    $data = $_POST[$varName] ?? FALSE;
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+
+// validating POST request
+if (!preg_match('/^[a-zA-Z ]+$/', post('name'))) {
+    $errors['name_error'] = 'Name is required and only letters and white spaces allowed.';
+}
+
+if (!filter_var(post('email'), FILTER_VALIDATE_EMAIL)) {
+    $errors['email_error'] = 'Invalid email.';
+}
+
+if (strlen(post('subject')) < 2) {
+    $errors['subject_error'] = 'Invalid subject.';
+}
+
+if (strlen(post('message')) < 2) {
+    $errors['message_error'] = 'Invalid message.';
+}
+
+function hasErrors($errors) {
+    return count($errors) > 0;
+}
 
 // preventing the script to run automatically
-if ($name == "" and $email == "" and $subject == "" and $message == "") {
-  
-
-    // validating POST request
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["name"])) {
-            $name_error = "Name is required";
-        } else {
-            $name = test_input($_POST["name"]);
-            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
-                $name_error = "Only letters and white spaces allowed";
-            }
-        }
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["email"])) {
-            $email_error = "Email is required";
-        } else {
-            $email = test_input($_POST["email"]);
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $email_error = "Invalid email format";
-            }
-        }
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["subject"])) {
-            $subject_error = "Subject is required";
-        } else {
-            $subject = test_input($_POST["subject"]);
-            if (strlen($subject) < 2) {
-                $subject_error = "Subject is invalid";
-            }
-        }
-    }
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        if (empty($_POST["message"])) {
-            $message_error = "Message is required";
-        } else {
-            $message = test_input($_POST["message"]);
-            if (strlen($message) < 2) {
-                $message_error = "Vaše zpráva není platná.<br />";
-            }
-        }
-    }
-
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-
-} else {
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
-
+if (isFormSent() && !hasErrors($errors)) {
 
     //Load Composer's autoloader
-    require "vendor/autoload.php";
-    // require __DIR__."/vendor/autoload.php";
+    require __DIR__ . "/vendor/autoload.php";
 
-   
-    $envFile = "/.env";
-    if (file_exists($envFile)) {
-        (new Dotenv\Dotenv(dirname($envFile)))->load();
-    }
-      
-    //     $dotenv = new Dotenv\Dotenv(dirname($envFile));
-        
-    //     if (file_exists($envFile)) {
-    //         (new Dotenv\Dotenv(dirname($envFile)))->load();
-    //     }
-
-    // $dotenv = new Dotenv\Dotenv($envFile);
-    // $dotenv->load();
+    $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+    $dotenv->load();
 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
 
         //Server settings
+        $mail->SMTPDebug = FALSE;                                 // Enable verbose debug output
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = "smtp.gmail.com";                       // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = "mkbeautysalon22@gmail.com"; //getenv('EMAIL');                 // SMTP username
+        $mail->Password = "testingaccount!)@("; //getenv('PASS');                           // SMTP password
+        $mail->SMTPSecure = "tls";                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        //Recipients
+        $mail->setFrom("philharmonic@centrum.cz");    // Add a recipient
+        $mail->addAddress("philharmonic@centrum.cz");     
         
-        
-        
-        Add a recipient
+       
         // $mail->addAddress("ellen@example.com");               // Name is optional
         // $mail->addReplyTo("info@example.com", "Information");
         // $mail->addCC("cc@example.com");
@@ -112,20 +82,23 @@ if ($name == "" and $email == "" and $subject == "" and $message == "") {
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
         // $mail->Name = ;
-        $mail->Subject = $name . " " . $subject;
-        $mail->Body = "<div> $email </div>" .  "<div> $message </div>" . "<div> $name </div>";
+        $mail->Subject = post('name') . " " . post('subject');
+        $mail->Body = sprintf(
+            "<div> %s </div>".  
+            "<div> %s </div>". 
+            "<div> %s </div>", 
+            post('email'), post('message'), post('name'));
         
 
         $mail->send();
         // echo '<script> setTimeout(close("Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve."), 5000); </script>';
         $success =  "<span class='success'>Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve.</span>";
         "<script> setTimeout(close($success), 5000); </script>";
-        $name = $email = $subject = $message = "";
-        print_r("Variables reseted",$_POST[$name]);
+        $_POST = NULL;
         
     } catch (Exception $e) {
-        $failure = "<span class='failure'>Zpráva nemohla být odeslána. Mailer Error: ' '</span>, $mail->ErrorInfo";
+        $failure = "<span class='failure'>Zpráva nemohla být odeslána.</span>";
+        $failure .= "<br><em>{$mail->ErrorInfo}</em>";
     }
     
 }
-?>
