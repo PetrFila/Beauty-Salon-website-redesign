@@ -28,9 +28,75 @@ $(document).ready(function() {
   
   
   // cards on services page
-  $('.card').click(function(){
-    $(this).toggleClass('flipped');
-  });
+  // $('.card').click(function(){
+  //   $(this).toggleClass('flipped');
+  // });
+
+  // $( "#clickme" ).click(function() {
+  //   $( "#book" ).animate({
+  //     opacity: 0.25,
+  //     left: "+=50",
+  //     height: "toggle"
+  //   }, 5000, function() {
+  //     // Animation complete.
+  //   });
+  // });
+
+
+
+
+
+
+ 
+
+    $(".home").click(function () {
+
+        about.animate({
+            'min-height': '0',
+            'height': '0',
+            'top': '50vh',
+            'padding': '0'
+        }, 300)
+        // .animate({
+        //     'width': '2px',
+        //     'left': '50%'
+        // }, 900)
+        // .fadeOut(200, function () {
+        //     front.fadeIn(200)
+        //     .animate({
+        //         'width': '100%',
+        //         'left': '0'
+        //     }, 900)
+        //     .animate({
+        //         'height': '100vh',
+        //         'top': '0',
+        //         'padding-top': '100px',
+        //         'padding-bottom': '100px'
+        //     }, 300);
+        // });
+    });
+});
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   //Real-time Validation
   //Name can't be blank

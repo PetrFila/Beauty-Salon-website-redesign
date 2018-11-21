@@ -49,8 +49,8 @@ if (isFormSent() && !hasErrors($errors)) {
     //Load Composer's autoloader
     require __DIR__ . "/vendor/autoload.php";
 
-    $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-    $dotenv->load();
+    // $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
+    // $dotenv->load();
 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {

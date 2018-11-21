@@ -68,8 +68,7 @@
                 </div>    
             
                 <div class="contact_form">
-                    <span><?= $success ?></span>
-                    <span><?= $failure ?></span>
+              
                     <form id="contact" method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
                         <!-- Name -->
                         <div>
@@ -115,10 +114,11 @@
 
     <!-- JQuery -->
     <script
-    type="text/javascript"
-    src="https://code.jquery.com/jquery-2.2.4.min.js"
-    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
      <!-- script source -->
      <script type="text/javascript" src = "script.js"></script> 
 
