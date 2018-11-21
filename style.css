@@ -286,8 +286,9 @@ input.valid, textarea.valid{
     }
     
     .logo{
+        display: block;
         width: 100px;
-        margin: 20px 0 0 20px;
+        margin: 5% 0 0 -60%;
     }
 
     a
@@ -308,7 +309,7 @@ input.valid, textarea.valid{
         display: block;
         position: absolute;
         float: right;
-        right: 40px;
+        right: 10%;
         top: 5%;
         width: 33px;
         height: 33px;
@@ -383,15 +384,17 @@ input.valid, textarea.valid{
       .slideOutRight {
         animation-duration: .5s;
       }
+
+      .nav {
+          width: 80%;
+          margin: auto;
+      }
       
       ul {
         list-style-type: none;
       }
 
-      .nav_menu > li {
-        margin: 10% 0;
-      }
-     
+         
   
       
     /* ABOUT PAGE */
@@ -463,7 +466,14 @@ input.valid, textarea.valid{
 
 
 @media screen and (max-width: 1200px) {
-  /* CONTACT PAGE */
+   
+    .logo{
+        display: block;
+        width: 100px;
+        margin: 5% 0 0 -40%;
+    }
+  
+    /* CONTACT PAGE */
 
 .contact-grid {
     display: block;
@@ -510,6 +520,11 @@ input.valid, textarea.valid{
 
 /* smart phones landscape mode and lower resolution */
 @media screen and (max-width: 639px) {
+    .logo{
+        display: block;
+        width: 100px;
+        margin: 5% 0 0 -30%;
+    }
     .body-grid {
         display: block;
         width: 100%;
@@ -569,8 +584,9 @@ input.valid, textarea.valid{
 
 @media screen and (max-width: 400px) {
     .logo{
+        display: block;
         width: 80px;
-        margin: 20px 0 0 20px;
+        margin: 0 0 0 -20%;
     }
     #menuToggle input:checked ~ ul
     {
