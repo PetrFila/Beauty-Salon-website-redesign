@@ -6,20 +6,20 @@ $(document).ready(function() {
   // hanburger menu
   $(function() {
     $(".menuToggle").click(function() {
-      if ($("#navigation").hasClass("hidden")) {
-        $("#navigation").attr("class", "visible animated slideInRight");
+      if ($("#mobile_navigation").hasClass("hidden")) {
+        $("#mobile_navigation").attr("class", "visible animated slideToggle");
       } else {
-        $("#navigation").attr("class", "hidden animated slideOutRight");
+        $("#mobile_navigation").attr("class", "hidden animated slideToggle");
       }
       $(this).toggleClass("open");
     });
   
-    $("#navigation").click(function() {
-      if ($("#navigation").hasClass("visible")) {
+    $("#mobile_navigation").click(function() {
+      if ($("#mobile_navigation").hasClass("visible")) {
         $(".menuToggle").toggleClass("open");
       } else {
       }
-      $(this).attr("class", "slideOutRight hidden");
+      $(this).attr("class", "slideToggle hidden");
     });
   
   });

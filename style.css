@@ -51,7 +51,7 @@ a:hover {
   
 }
 
-#navigation {
+#mobile_navigation {
     display: none;
 }
 
@@ -304,7 +304,7 @@ input.valid, textarea.valid{
     color: pink;
     }
 
-    /* Hanburger menu */
+    /* Hamburger menu */
     .menuToggle {
         display: block;
         position: absolute;
@@ -361,9 +361,9 @@ input.valid, textarea.valid{
     * Make this absolute positioned
     * at the top left of the screen
     */
-      #navigation {
+      #mobile_navigation {
         position: absolute;
-        left: 0;
+        right: 0;
         top: 0;
         display: block;
         width: 300px;
