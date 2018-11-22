@@ -53,5 +53,7 @@ Issues:
 
 - The hamburger menu had to be completely re-done by using jQuery because the original CSS version was using a transparent div which was over contact form and submit button so they weren't accessible.
 
+- complete redesign of the service page. Original design contained flipping cards but they had to be replaced with modal style of overlay pop up windows which works well.
+
 Frontend form validation taken from this tutorial:
 https://formden.com/blog/validate-contact-form-jquery

@@ -51,7 +51,7 @@ a:hover {
   
 }
 
-#navigation {
+#mobile_navigation {
     display: none;
 }
 
@@ -62,11 +62,19 @@ a:hover {
 
 /* INDEX PAGE name of the lady */
 h1 {
-    margin: 0;
-    padding: 0;
     text-align: center;
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
+}
+
+.fullScreenHeader {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+     display: none;
 }
 
 #menu li {
@@ -120,7 +128,7 @@ h1 {
 }
 
 .text-profile > p {
-    padding-top: 10%;
+    padding-top: 8%;
 }
 
 .img-profile > img {
@@ -146,135 +154,28 @@ h1 {
 
 .grid-container-services {
     
-    display: inline-grid;
-    grid-template-columns: 33% 33% 33%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 99%;
     grid-column-gap: 5px;
-    /* grid-row-gap: -20px; */
-    justify-content: center;
+    /* grid-row-gap: -20px;*/
+    justify-content: center; 
     background: pink;
 }
 
-/* .grid-container-services.cards {
-    background: 0;
-    width: 88%;
-    padding: 20px 0 0 0;
-} */
 
-.container {
-    display: block;
-    width: 100%;
-    height: 70%;
-    /* margin: 0 /auto; */
-
-    /* position: relative; */
-    /* float: left; */
-    /* width: 28%; */
-    /* height: 660px; */
-    /* margin: 10px 2px 10px 2px; */ 
-    background: 0;
-
-    
-    /* Set the depth of the elements */
-    -webkit-perspective: 800px;
-    -moz-perspective: 800px;
-    -o-perspective: 800px;
-    perspective: 800px;
-}
-
-.card {
-    
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    /* height: 5%; */
-    cursor: pointer;
-    /* width: 100%;
-    height: 100%;
-    position: absolute;
-    cursor: pointer; */
-    /* background: lightsteelblue; */
-    /* background: white; */
-    /* Set the transition effects */
-    -webkit-transition: -webkit-transform 0.4s;
-    -moz-transition: -moz-transform 0.4s;
-    -o-transition: -o-transform 0.4s;
-    transition: transform 0.4s;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    -o-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-}
-
-.card.flipped {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
-}
-
-.card .front,
-.card .back {
-    position: relative;
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-    background: #444444;
-    /* line-height: 260px; */
-  
-    /* text-align: center; */
-    /* font-size: 4em; */
-    /* position: absolute; */
-    
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -o-backface-visibility: hidden;
-    backface-visibility: hidden;
-
-    /* box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25); */
-}
-
-.card .front { height: auto; }
-.card .back { height: 0; }
-
-.card.flipped .front { height: 0; }
-.card.flipped .back { height: auto; }
-
-
-
-.card .front > img {
-    display: block;
+.front > img {
+    display: inline-block;
     width: 100%;
     height: auto;
-    margin: 0 auto;
 }
 
-.card .front > h3 {
-    position: relative;
-    top: -50px;
+.front > h3, .back > p {
     text-align: center;
 }
 
-.card .back {
-    /* position: relative; */
-    /* top: -600px; */
-    width: 100%;
-    height: auto;
-    
-    font-size: 17px;
-    text-align: left;
-    line-height: 25px;
-    /* background: #444444; */
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    -o-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
- 
-}
-
-.card .back .content {
-    width: 90%;
-    padding-left: 3%;
-    padding-right: 3%;
+.back {
+    display: none;
 }
 
 
@@ -393,8 +294,9 @@ input.valid, textarea.valid{
     }
     
     .logo{
+        display: block;
         width: 100px;
-        margin: 20px 0 0 20px;
+        margin: 5% 0 0 -30%;
     }
 
     a
@@ -410,12 +312,12 @@ input.valid, textarea.valid{
     color: pink;
     }
 
-    /* Hanburger menu */
+    /* Hamburger menu */
     .menuToggle {
         display: block;
         position: absolute;
         float: right;
-        right: 40px;
+        right: 10%;
         top: 5%;
         width: 33px;
         height: 33px;
@@ -467,13 +369,13 @@ input.valid, textarea.valid{
     * Make this absolute positioned
     * at the top left of the screen
     */
-      #navigation {
+      #mobile_navigation {
         position: absolute;
-        left: 0;
+        right: 0;
         top: 0;
         display: block;
         width: 300px;
-        height: 400px;
+        height: 100%;
         justify-content: center;
         padding-top: 140px;
         padding-bottom: 800px;
@@ -490,15 +392,17 @@ input.valid, textarea.valid{
       .slideOutRight {
         animation-duration: .5s;
       }
+
+      .nav {
+          width: 80%;
+          margin: auto;
+      }
       
       ul {
         list-style-type: none;
       }
 
-      .nav_menu > li {
-        margin: 10% 0;
-      }
-     
+         
   
       
     /* ABOUT PAGE */
@@ -570,7 +474,8 @@ input.valid, textarea.valid{
 
 
 @media screen and (max-width: 1200px) {
-  /* CONTACT PAGE */
+   
+    /* CONTACT PAGE */
 
 .contact-grid {
     display: block;
@@ -606,9 +511,7 @@ input.valid, textarea.valid{
 
 /* iPad  */
 @media screen and (max-width: 771px) {
-    .h1_line_break {
-        display: block;
-    }
+   
     .main_img {
         width: 100%;
         height: auto;
@@ -617,6 +520,11 @@ input.valid, textarea.valid{
 
 /* smart phones landscape mode and lower resolution */
 @media screen and (max-width: 639px) {
+    .logo{
+        display: block;
+        width: 100px;
+        margin: 5% 0 0 -30%;
+    }
     .body-grid {
         display: block;
         width: 100%;
@@ -654,20 +562,37 @@ input.valid, textarea.valid{
 
 @media screen and (max-width: 599px) {
    
-    .p_line_break {
-        display: block;
-        margin-top: 10px;
+    .fullScreenHeader {
+        display: none;
     }
+
+    .mobileScreenHeader {
+        display: block;
+    }
+
+    .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+        display: block;
+        width: 100%;
+        margin: auto 0;
+    }
+    
     .makeup_artist {
         display: none;
     }
-    .makeup_artist_mobile {
-        display: block;
-        margin: 20px 0;
-        padding: 0;
+
+    .makeup_artist_mobile, .p_line_break {
         text-align: center;
         letter-spacing: 15px;
     }
+
+    .makeup_artist_mobile {
+        padding: 4% 0 1% 0;
+    }
+
+    .p_line_break {
+        padding: 1% 0 4% 0;
+    }
+
     .gallery {
         width: 100%;
         margin: auto;
@@ -675,10 +600,12 @@ input.valid, textarea.valid{
 }
 
 @media screen and (max-width: 400px) {
-    .logo{
+    .logo {
+        display: block;
         width: 80px;
-        margin: 20px 0 0 20px;
+        margin: 5% 0 0 -30%;
     }
+
     #menuToggle input:checked ~ ul
     {
     transform: translate(25%, 0);
