@@ -108,10 +108,10 @@ h1 {
     grid-column: 2;
     grid-row: 1 / 3;
 }
-.certificates {
+/* .certificates {
     grid-column: 1;
     grid-row: 2;
-}
+} */
 
 .text-profile > p, .certificates > p {
     width: 80%;
@@ -120,12 +120,12 @@ h1 {
     text-justify: inter-character;
 }
 
-.gallery {
+/* .gallery {
     display: block;
     width: 80%;
     margin: 0 auto;
     
-}
+} */
 
 .text-profile > p {
     padding-top: 8%;
@@ -135,7 +135,7 @@ h1 {
     margin-top: 10%;
 }
 
-.certificates > p, .gallery > a > img {
+.certificates > p {
     padding-top: 5%;
 }
 
@@ -418,7 +418,7 @@ input.valid, textarea.valid{
 
     .body-grid {
     display: grid;
-    grid-template-columns: 44%;
+    grid-template-columns: 50%;
     grid-template-rows: auto auto auto;
     justify-content: center;
    
@@ -430,6 +430,12 @@ input.valid, textarea.valid{
     .img-profile {
         grid-column: 2;
         grid-row: 1 / 3;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin-top: 10%;
     }
     .certificates {
         grid-column: 1;
@@ -443,70 +449,102 @@ input.valid, textarea.valid{
         text-justify: inter-character;
     }
 
-    .gallery {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-    
-    }
-
     .text-profile > p {
         padding-top: 10%;
     }
 
-    .img-profile > img {
-        width: 90%;
-        height: auto;
-        margin-top: 10%;
+    .gallery {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    .certificates > p, .gallery > a > img {
-        padding-top: 5%;
+    .gallery > a {
+        display: inline-block;
+        width: 25%;
+        margin: 0 auto;     
+
     }
+
+ 
 
     .makeup_artist_mobile {
         display: none;
     }
-
-   
- 
 }
 
 
 @media screen and (max-width: 1200px) {
    
+     /* ABOUT PAGE */
+    
+    .img-profile > img {
+        width: 85%;
+        height: auto;
+        margin: 10% 0 0 5%;
+    }
+      
+    .text-profile > p {
+        display: block;
+        width: 80%;
+        margin: 0 0 0 12%;
+        padding-top: 10%;
+    }
+
+    .certificates > p {
+        display: block;
+        width: 80%;
+        margin: 0 0 0 12%;
+    }
+
+    .gallery {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .gallery > a {
+        display: inline-block;
+        width: 20%;
+        margin: 0 auto; 
+    }
+
+    /* .gallery > a > img {
+        width: 100%;
+        margin: 0 auto;     
+    }   */
+    
+    
     /* CONTACT PAGE */
 
-.contact-grid {
-    display: block;
-    /* grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-items: center; */
-    /* background-color: burlywood; */
-}
+    .contact-grid {
+        display: block;
+        /* grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        justify-items: center; */
+        /* background-color: burlywood; */
+    }
 
-.contact_details {
-    /* grid-column: 1;
-    grid-row: 1; */
-    width: 100%;
-    padding: 0 0 90px 0;
-    background-color: cadetblue;
-}
+    .contact_details {
+        /* grid-column: 1;
+        grid-row: 1; */
+        width: 100%;
+        padding: 0 0 90px 0;
+        background-color: cadetblue;
+    }
 
-.google_map {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-}
+    .google_map {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
 
-.contact_form {
-    /* grid-column: 2;
-    grid-row: 1; */
-    width: 100%;
-    padding: 50px 0;
-    background-color: #eee;
+    .contact_form {
+        /* grid-column: 2;
+        grid-row: 1; */
+        width: 100%;
+        padding: 50px 0;
+        background-color: #eee;
 
-}  
+    }  
 }
 
 /* iPad  */
@@ -536,28 +574,30 @@ input.valid, textarea.valid{
         text-align: justify;
         text-justify: inter-character;
     }
-    .gallery {
-        display: block;
-        width: 90%;
-        margin: 0 auto;
-    }
+   
     .text-profile > p {
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
 
     .img-profile > img {
-        width: 90%;
+        width: 100%;
         height: auto;
-        margin: 10% 0 0 5%;
+        margin: 0 auto;
     }
 
-    .certificates > p, .gallery > a > img {
-        padding-top: 5%;
+    .certificates > p {
+        width:100%;
     }
-    .certificates > p, .gallery > a > img {
-        margin: 0 5% 0 5%;
+
+     .gallery {
+        width: 100%;
+        margin: 0 auto;
     }
+
+   
+
+
 }
 
 @media screen and (max-width: 599px) {
@@ -592,10 +632,26 @@ input.valid, textarea.valid{
     .p_line_break {
         padding: 1% 0 4% 0;
     }
+}
 
+@media screen and (max-width: 566px) {
     .gallery {
-        width: 100%;
-        margin: auto;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 483px) {
+    .gallery {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 423px) {
+    .gallery {
+        width: 90%;
+        margin: 0 auto;
     }
 }
 
@@ -613,6 +669,11 @@ input.valid, textarea.valid{
    
 }
 
-
+@media screen and (max-width: 376px) {
+    .gallery {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
 
 
