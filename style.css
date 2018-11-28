@@ -73,9 +73,24 @@ h1 {
     padding: 0;
 }
 
-.mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+.mobile_screen_first_name {
      display: none;
 }
+
+.mobile_screen_second_name {
+    display: none;
+}
+
+.makeup_artist_mobile {
+    display: none;
+}
+
+.p_line_break {
+    display: none;
+}
+
+
+
 
 #menu li {
     list-style: none;
@@ -284,6 +299,10 @@ input.valid, textarea.valid{
     .full_menu {
         display: none;
     }
+
+    .makeup_artist_mobile {
+        display: none;
+    }
     
     .logo{ 
         display: block;
@@ -445,9 +464,7 @@ input.valid, textarea.valid{
         padding-top: 10%;
     }
 
-    .makeup_artist_mobile {
-        display: none;
-    }
+   
 }
 
 
