@@ -125,13 +125,13 @@ h1 {
 }
 
 .gallery {
-    
     display: grid;
     grid-template-columns: auto auto auto;
     width: 100%;
     justify-content: center; 
     background: pink;
 }
+
 
 .makeup_artist_mobile {
     display: none;
@@ -147,7 +147,6 @@ h1 {
 }
 
 .grid-container-services {
-    
     display: grid;
     grid-template-columns: auto auto auto;
     width: 99%;
@@ -276,10 +275,9 @@ input.valid, textarea.valid{
 
 @media screen and (max-width: 1300px) {
 
-    body
-    {
-    margin: 0;
-    padding: 0;
+    body {
+        margin: 0;
+        padding: 0;
     /* background: #232323; */
     }
 
@@ -287,23 +285,20 @@ input.valid, textarea.valid{
         display: none;
     }
     
-    .logo{
+    .logo{ 
         display: block;
         width: 100px;
         margin: 5% 0 0 -30%;
     }
 
-    a
-    {
-    text-decoration: none;
-    color: #232323;
-    
-    transition: color 0.3s ease;
+    a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
     }
 
-    a:hover
-    {
-    color: pink;
+    a:hover {
+        color: pink;
     }
 
     /* Hamburger menu */
@@ -318,9 +313,9 @@ input.valid, textarea.valid{
         padding: 5px;
         z-index: 1;
         cursor: pointer;
-      }
-      
-      .menuToggle span {
+    }
+    
+    .menuToggle span {
         display: block;
         width: 33px;
         height: 4px;
@@ -329,41 +324,40 @@ input.valid, textarea.valid{
         margin-bottom: 5px;
         cursor: pointer;
         transition: .7s ease;
-      }
-      
-      .hidden {
+    }
+    
+    .hidden {
         opacity: 0;
         transition-delay: .5s;
         pointer-events: none;
         cursor: default;
-      }
-      
-      .visible {
+    }
+    
+    .visible {
         opacity: 1;
-        
-      }
-      
-      /* Transform all the slices of hamburger into a crossmark */
-      .menuToggle.open span:nth-child(1) {
+    }
+    
+    /* Transform all the slices of hamburger into a crossmark */
+    .menuToggle.open span:nth-child(1) {
         opacity: 1;
         transform: rotate(45deg) translate(0, 13px);
-      }
-      
-      .menuToggle.open span:nth-child(2) {
+    }
+    
+    .menuToggle.open span:nth-child(2) {
         opacity: 0;
         transform: rotate(0deg) scale(0.2, 0.2);
-      }
-      
-      .menuToggle.open span:nth-child(3) {
+    }
+    
+    .menuToggle.open span:nth-child(3) {
         transform: rotate(-45deg) translate(0, -13px);
-      }
-      
-      /* Navigation pop up block */
-      /*
-    * Make this absolute positioned
-    * at the top left of the screen
-    */
-      #mobile_navigation {
+    }
+    
+    /* Navigation pop up block */
+    /*
+* Make this absolute positioned
+* at the top left of the screen
+*/
+    #mobile_navigation {
         position: absolute;
         right: 0;
         top: 0;
@@ -377,24 +371,24 @@ input.valid, textarea.valid{
         list-style-type: none;
         font-size: 25px;
         transition: 0.3s ease-in; 
-      }
-            
-      .slideInRight {
+    }
+        
+    .slideInRight {
         animation-duration: .5s;
-      }
-      
-      .slideOutRight {
+    }
+    
+    .slideOutRight {
         animation-duration: .5s;
-      }
+    }
 
-      .nav {
-          width: 80%;
-          margin: auto;
-      }
-      
-      ul {
+    .nav {
+        width: 80%;
+        margin: auto;
+    }
+    
+    ul {
         list-style-type: none;
-      }
+    }
 
          
   
@@ -403,6 +397,7 @@ input.valid, textarea.valid{
     .body {
        margin-top: 100px;
     }
+
     .main_img {
         display: block;
         margin-left: auto;
@@ -410,17 +405,19 @@ input.valid, textarea.valid{
     
     }
 
-        .body-grid {
+    .body-grid {
         display: grid;
         grid-template-columns: 50%;
         grid-template-rows: auto auto auto;
         justify-content: center;
    
     }
+
     .text-profile {
         grid-column: 1;
         grid-row: 1;
     }
+
     .img-profile {
         grid-column: 2;
         grid-row: 1 / 3;
@@ -431,12 +428,13 @@ input.valid, textarea.valid{
         height: auto;
         margin-top: 10%;
     }
-    .certificates {
+
+    /* .certificates {
         grid-column: 1;
         grid-row: 2;
-    }
+    } */
 
-    .text-profile > p, .certificates > p {
+    .text-profile > p, .certificates {
         width: 80%;
         margin: 0 auto;
         text-align: justify;
@@ -457,7 +455,7 @@ input.valid, textarea.valid{
    
      /* ABOUT PAGE */
     
-    .img-profile > img {
+    /* .img-profile > img {
         width: 85%;
         height: auto;
         margin: 10% 0 0 5%;
@@ -472,7 +470,7 @@ input.valid, textarea.valid{
 
     .certificates > p {
         width: 100%;
-    }
+    } */
 
  
     
@@ -509,6 +507,17 @@ input.valid, textarea.valid{
         background-color: #eee;
 
     }  
+}
+
+
+@media screen and (max-width: 1020px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        justify-content: center; 
+        background: rgb(7, 88, 134);
+    }
 }
 
 /* iPad  */
@@ -554,9 +563,12 @@ input.valid, textarea.valid{
         width:100%;
     }
 
-     .gallery {
+    .gallery {
+        display: grid;
+        grid-template-columns: auto auto auto;
         width: 100%;
-        margin: 0 auto;
+        justify-content: center; 
+        background: pink;
     }
 
    
@@ -598,27 +610,15 @@ input.valid, textarea.valid{
     }
 }
 
-@media screen and (max-width: 566px) {
-    .gallery {
-        width: 70%;
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 483px) {
+/* @media screen and (max-width: 455px) {
     .gallery {
         width: 80%;
         margin: 0 auto;
     }
-}
+} */
 
-@media screen and (max-width: 423px) {
-    .gallery {
-        width: 90%;
-        margin: 0 auto;
-    }
-}
 
+/* 
 @media screen and (max-width: 400px) {
     .logo {
         display: block;
@@ -628,7 +628,7 @@ input.valid, textarea.valid{
 
     #menuToggle input:checked ~ ul
     {
-    transform: translate(25%, 0);
+        transform: translate(25%, 0);
     }
    
 }
@@ -638,6 +638,6 @@ input.valid, textarea.valid{
         width: 100%;
         margin: 0 auto;
     }
-}
+} */
 
 
