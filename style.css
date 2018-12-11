@@ -6,14 +6,19 @@ body {
 
 /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
-header {
-display: grid;
-justify-items: center;
-}
-.nav_container {
-    grid-area: 1 / 2 / 2 / 3;
+    .logo_div { grid-area: logo_div; }
+    .nav_container { grid-area: nav_container; }
+    .index_body { grid-area: index_body; }
+  
     
-}
+
+    .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        'logo_div nav_container'
+        'index_body index_body';
+    }
 
 
 /* LOGO AND NAVIGATION BEHAVIOUR */
@@ -90,6 +95,8 @@ h1 {
     text-align: center;
     letter-spacing: 15px;
 }
+
+
 
 
 /*   ABOUT PAGE */

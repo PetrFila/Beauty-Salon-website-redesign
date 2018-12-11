@@ -1,0 +1,261 @@
+body {
+    font-family: "Avenir Next", "Avenir", sans-serif;
+    color: #8f9392;
+}
+
+.menuToggle, .mobile_navigation, .nav {
+    display: none;   
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* MAIN LAYOUT - 2 COLUMNS */
+
+.logo_div { grid-area: logo_div; }
+.nav_container { grid-area: nav_container; }
+.index_body { grid-area: index_body; }
+.text-profile { grid-area: text-profile; }
+.img-profile { grid-area: img-profile; }
+.certificates_header { grid-area: certificates_header; }
+.gallery { grid-area: gallery; }
+
+
+.container {
+display: grid;
+grid-template-columns: 50% 50%;
+grid-template-areas:
+    'logo_div nav_container'
+    'index_body index_body'
+    'text-profile img-profile'
+    'certificates_header certificates_header'
+    'gallery gallery';
+}
+
+/* NAVIGATION BEHAVIOUR */
+
+.full_menu li {
+    list-style: none;
+    font-size: 22px;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 20px 0 20px;
+    color: #232323;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: pink;
+}
+
+
+/* INDEX PAGE */
+h1 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+}
+
+.mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+    display: none;
+}
+
+.makeup_artist_mobile {
+    display: none;
+}
+
+.fullScreenHeader {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* INDEX PAGE under the name  */
+.makeup_artist {
+    margin: 20px 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1650px) {
+    .container {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .container {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .full_menu {
+        display: none;
+    }
+
+
+    /* Hamburger menu */
+    .menuToggle {
+        display: block;
+        position: absolute;
+        right: 10%;
+        top: 4%;
+        width: 33px;
+        height: 33px;
+        padding: 5px;
+        z-index: 1;
+        cursor: pointer;
+    }
+    
+    .menuToggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        background: #8f9392;
+        border-radius: 3px;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: .7s ease;
+    }
+    
+    .hidden {
+        opacity: 0;
+        transition-delay: .5s;
+        pointer-events: none;
+        cursor: default;
+    }
+    
+    .visible {
+        opacity: 1;
+    }
+
+    /* Transform all the slices of hamburger into a crossmark */
+    .menuToggle.open span:nth-child(1) {
+        opacity: 1;
+        transform: rotate(45deg) translate(0, 13px);
+    }
+    
+    .menuToggle.open span:nth-child(2) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    .menuToggle.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(0, -13px);
+    }
+
+    /* Navigation pop up block */
+    /*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+    #mobile_navigation {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 300px;
+        height: 100%;
+        padding-top: 140px;
+        background: #ededed;
+        transition: 0.3s ease-in; 
+    }
+
+
+    .slideInRight {
+        animation-duration: .5s;
+    }
+    
+    .slideOutRight {
+        animation-duration: .5s;
+    }
+
+    .nav {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    ul {
+        list-style-type: none;
+    }
+
+    a {
+        
+        text-decoration: none;
+        font-size: 25px;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: pink;
+    }
+
+    .nav > ul > a > li {
+        margin-bottom: 40%;
+    }
+
+    
+}
+
+@media screen and (max-width: 550px) {
+
+    .container {
+    width: 100%;
+    grid-template-areas:
+        'logo_div nav_container'
+        'text-profile text-profile' 
+        'img-profile img-profile'
+        'certificates_header certificates_header'
+        'gallery gallery';
+    }
+
+    .logo {
+        width: 80px;
+      
+    }
+
+    .text-profile > p, .img-profile > img, .certificates_header > p {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .certificates_header > p {
+        margin: 3% 0 3% 0;
+    }
+
+   
+}
+

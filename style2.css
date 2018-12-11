@@ -8,7 +8,7 @@
     }
 
     .container {
-        width: 50%;
+        width: 65%;
         margin: 0 auto;
     }
 
@@ -16,6 +16,7 @@
 
     .logo_div { grid-area: logo_div; }
     .nav_container { grid-area: nav_container; }
+    .index_body { grid-area: index_body; }
     .text-profile { grid-area: text-profile; }
     .img-profile { grid-area: img-profile; }
     .certificates_header { grid-area: certificates_header; }
@@ -27,12 +28,54 @@
     grid-template-columns: 50% 50%;
     grid-template-areas:
         'logo_div nav_container'
+        'index_body index_body'
         'text-profile img-profile'
         'certificates_header certificates_header'
         'gallery gallery';
     }
+ 
+
+
+    /* INDEX PAGE */
+
+    .index_body { 
+        grid-area: index_body;
+        justify-self: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+        font-size: 60px;
+    }
+
+    .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+        display: none;
+    }
+
+    .makeup_artist_mobile {
+        display: none;
+    }
+
+    .fullScreenHeader {
+        width: 100%;
+        margin: 20% 0 0 0;
+        padding: 0;
+    }
 
    
+    /* INDEX PAGE under the name  */
+    .makeup_artist {
+        margin: 20px 0;
+        padding: 0;
+        text-align: center;
+        letter-spacing: 15px;
+    }
+
+
+    
+
+    /*  ABOUT PAGE */
     .logo_div {
         grid-area: logo_div;
         align-self: center;
@@ -40,7 +83,7 @@
 
     .logo {
         width: 100px;
-        margin: 0 5%;
+        margin: 10% 5% 0 5%;
     }
 
     .nav_container {
@@ -111,7 +154,7 @@
 
     @media screen and (max-width: 1650px) {
         .container {
-            width: 65%;
+            width: 75%;
             margin: 0 auto;
         }
     }
@@ -126,6 +169,11 @@
     @media screen and (max-width: 1500px) {
         .container {
             width: 85%;
+            margin: 0 auto;
+        }
+
+        .main_img {
+            width: 100%;
             margin: 0 auto;
         }
     }
@@ -147,7 +195,7 @@
             display: block;
             position: absolute;
             right: 10%;
-            top: 4%;
+            top: 10%;
             width: 33px;
             height: 33px;
             padding: 5px;
@@ -246,16 +294,63 @@
         
     }
 
+    /* iPad Pro portrait mode */
+    @media screen and (max-width: 1024px) {
+        .menuToggle {
+            top: 7%;
+        }
+    }
+
+    /* Pixel 2XL landscape mode */
+    /* @media screen and (max-width: 823px) {
+        .menuToggle {
+            top: 15%;
+        }
+    } */
+
+    /* iPhoneX landscape mode */
+    /* @media screen and (max-width: 812px) {
+        .menuToggle {
+            top: 15%;
+        }
+    } */
+
+    /* iPad portrait mode */
+    @media screen and (max-width: 768px) {
+        .menuToggle {
+            top: 7%;
+        }
+    }
+
+    /* @media screen and (max-width: 740px) {
+        .menuToggle {
+            top: 15%;
+        }
+    } */
+
+    /* @media screen and (min-width: px) {
+        .menuToggle {
+            top: 15%;
+        }
+    } */
+
     @media screen and (max-width: 550px) {
     
+    
+
         .container {
-        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
         grid-template-areas:
             'logo_div nav_container'
-            'text-profile text-profile' 
-            'img-profile img-profile'
+            'index_body index_body'
+            'text-profile img-profile'
             'certificates_header certificates_header'
             'gallery gallery';
+        }
+
+        .menuToggle {
+            top: 5%;
         }
 
         .logo {
@@ -263,10 +358,39 @@
           
         }
 
-        .text-profile > p, .img-profile > img, .certificates_header > p {
+        .main_img,.text-profile > p, .img-profile > img, .certificates_header > p {
             width: 100%;
             margin: 0 auto;
         }
+
+        .fullScreenHeader, .makeup_artist {
+            display: none;
+        }
+
+        .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+            display: block;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        .mobile_screen_first_name {
+            margin: 20% 0 0 0;
+        }
+
+        .makeup_artist_mobile, .p_line_break {
+            letter-spacing: 15px;
+        }
+
+        .makeup_artist_mobile {
+            padding: 4% 0 1% 0;
+        }
+
+        .p_line_break {
+            padding: 2% 0 4% 0;
+        }
+
+     
 
         .certificates_header > p {
             margin: 3% 0 3% 0;
@@ -275,4 +399,9 @@
        
     }
 
-   
+    
+    /* @media screen and (max-width: 768px) {
+        .menuToggle {
+            top: 5%;
+        }
+    } */
