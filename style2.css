@@ -7,11 +7,7 @@
         display: none;   
     }
 
-    .container {
-        width: 65%;
-        margin: 0 auto;
-    }
-
+    
     /* MAIN LAYOUT - 2 COLUMNS */
 
     .logo_div { grid-area: logo_div; }
@@ -21,6 +17,8 @@
     .img-profile { grid-area: img-profile; }
     .certificates_header { grid-area: certificates_header; }
     .gallery { grid-area: gallery; }
+    .grid-container-services {grid-area: grid-container-services; }
+    
     
 
     .container {
@@ -31,11 +29,14 @@
         'index_body index_body'
         'text-profile img-profile'
         'certificates_header certificates_header'
-        'gallery gallery';
+        'gallery gallery'
+        'grid-container-services grid-container-services';
+
+        width: 65%;
+        margin: 0 auto;
     }
- 
 
-
+    
     /* INDEX PAGE */
 
     .index_body { 
@@ -147,10 +148,62 @@
     
     /* CERTIFICATION HEADER AND GALLERY */
   
-
     .gallery_row1 > a, .gallery_row2 > a {
        margin: 0;
     }
+
+
+    /* SERVICES PAGE */
+
+  
+    .grid-container-services {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        
+        width: 100%;
+      
+        background: pink;
+    }
+
+    .front{
+        text-align: center;
+
+    }
+
+
+    .front > img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+ 
+
+    .back {
+        display: none;
+    }
+
+  
+
+    button {
+        display: block;
+        padding: 10px 60px;
+       
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: normal;
+        color: white;
+        background: #444;
+    }
+    
+    button:hover {
+        background-color: pink;
+        cursor: pointer;
+    }
+
+
 
     @media screen and (max-width: 1650px) {
         .container {
@@ -194,8 +247,8 @@
         .menuToggle {
             display: block;
             position: absolute;
-            right: 10%;
-            top: 10%;
+            right: 12%;
+            top: 7%;
             width: 33px;
             height: 33px;
             padding: 5px;
@@ -295,18 +348,29 @@
     }
 
     /* iPad Pro portrait mode */
-    @media screen and (max-width: 1024px) {
+    /* @media screen and (max-width: 1024px) {
         .menuToggle {
             top: 7%;
         }
-    }
+    } */
 
     /* Pixel 2XL landscape mode */
-    /* @media screen and (max-width: 823px) {
-        .menuToggle {
-            top: 15%;
+    @media screen and (max-width: 850px) {
+        .grid-container-services {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            
+            width: 100%;
+          
+            background: lightblue;
         }
-    } */
+
+        .front > h3 {
+            font-weight: normal;
+        }
+    }
 
     /* iPhoneX landscape mode */
     /* @media screen and (max-width: 812px) {
@@ -316,11 +380,11 @@
     } */
 
     /* iPad portrait mode */
-    @media screen and (max-width: 768px) {
+    /* @media screen and (max-width: 768px) {
         .menuToggle {
             top: 7%;
         }
-    }
+    } */
 
     /* @media screen and (max-width: 740px) {
         .menuToggle {
@@ -346,12 +410,14 @@
             'index_body index_body'
             'text-profile img-profile'
             'certificates_header certificates_header'
-            'gallery gallery';
+            'gallery gallery'
+            'grid-container-services grid-container-services';
         }
 
-        .menuToggle {
-            top: 5%;
-        }
+        /* .menuToggle {
+            top: 10px;
+            right: 10px;
+        } */
 
         .logo {
             width: 80px;
@@ -396,7 +462,21 @@
             margin: 3% 0 3% 0;
         }
     
+        .grid-container-services {
+            display: grid;
+            grid-template-columns: auto;
+            grid-row-gap: 5px;
+            width: 80%;
+            background: lightyellow;
+        }
        
+        .grid-container-services {
+            grid-area: grid-container-services;
+            justify-self: center;
+         
+        }
+
+
     }
 
     
