@@ -6,7 +6,7 @@ body {
 
 /* HEADER AND NAVIGATION CONTAINERS LAYOUT */
 
-    .logo_div { grid-area: logo_div; }
+    /* .logo_div { grid-area: logo_div; }
     .nav_container { grid-area: nav_container; }
     .index_body { grid-area: index_body; }
   
@@ -18,12 +18,12 @@ body {
     grid-template-areas:
         'logo_div nav_container'
         'index_body index_body';
-    }
+    } */
 
 
 /* LOGO AND NAVIGATION BEHAVIOUR */
 
-.logo {
+/* .logo {
     width: 150px;
     height: auto;
 }
@@ -45,23 +45,23 @@ a {
 
 a:hover {
     color: pink;
-}
+} */
 
 
 /* BODY CONTAINERS */
 
 
-#mobile_navigation {
+/* #mobile_navigation {
     display: none;
 }
 
 #menuToggle input {
     display: none;
-}
+} */
 
 
 /* INDEX PAGE name of the lady */
-h1 {
+/* h1 {
     text-align: center;
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
@@ -85,16 +85,16 @@ h1 {
 #menu li {
     list-style: none;
     font-size: 22px;
-}
+} */
 
 
 /* INDEX PAGE under the name  */
-.makeup_artist {
+/* .makeup_artist {
     margin: 20px 0;
     padding: 0;
     text-align: center;
     letter-spacing: 15px;
-}
+} */
 
 
 
@@ -144,7 +144,7 @@ h1 {
 
 
 /* SERVICES PAGE */
-
+/* 
 .body-services {
     display: block;
     width: 60%;
@@ -156,7 +156,7 @@ h1 {
     grid-template-columns: auto auto auto;
     width: 99%;
     grid-column-gap: 5px;
-    /* grid-row-gap: -20px;*/
+    grid-row-gap: -20px;
     justify-content: center; 
     background: pink;
 }
@@ -174,17 +174,17 @@ h1 {
 
 .back {
     display: none;
-}
+} */
 
 
 /* CONTACT PAGE grid */
 
-.contact-grid {
+/* .contact-grid {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-items: center;
-    /* background-color: burlywood; */
+    background-color: burlywood;
 }
 
 .contact_details {
@@ -238,10 +238,10 @@ button {
 button:hover {
     background-color: pink;
     cursor: pointer;
-}
+} */
 
 /* form validation error messages and real time validation */
-.error{
+/* .error{
 	display: none;
 }		
 .error_show, .PHPerror {
@@ -270,7 +270,7 @@ input.valid, textarea.valid{
     background-color: lightcoral;
     text-align: center;
     color: white;
-}
+} */
 
 
 

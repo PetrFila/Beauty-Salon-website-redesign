@@ -64,7 +64,7 @@ $(document).ready(function() {
   });
 
   // After Form Submitted Validation
-  $("#contact_submit button").click(function(event){
+  $(".message").click(function(event){
     var form_data=$("#contact").serializeArray();
     var error_free=true;
     for (var input in form_data){

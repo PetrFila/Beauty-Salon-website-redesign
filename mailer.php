@@ -49,8 +49,10 @@ if (isFormSent() && !hasErrors($errors)) {
     //Load Composer's autoloader
     require __DIR__ . "/vendor/autoload.php";
 
-    // $dotenv = new Dotenv\Dotenv(dirname(__DIR__));
-    // $dotenv->load();
+    $dotenv = new Dotenv\Dotenv(__DIR__);
+    echo(__DIR__);
+    $dotenv->load();
+    
 
     $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
     try {
@@ -64,12 +66,11 @@ if (isFormSent() && !hasErrors($errors)) {
         $mail->Password = getenv('PASS');                     // SMTP password
         $mail->SMTPSecure = "tls";                            // Enable TLS encryption, `ssl` also accepted
         $mail->Port = 587;                                    // TCP port to connect to
-
-        //Recipients
-        $mail->setFrom("philharmonic@centrum.cz");    // Add a recipient
-        $mail->addAddress("philharmonic@centrum.cz");     
         
-       
+        //Recipients
+        $mail->setFrom(getenv('DEST'));    // Add a recipient
+        $mail->addAddress(getenv('DEST'));     
+        
         // $mail->addAddress("ellen@example.com");               // Name is optional
         // $mail->addReplyTo("info@example.com", "Information");
         // $mail->addCC("cc@example.com");
@@ -80,7 +81,9 @@ if (isFormSent() && !hasErrors($errors)) {
         // $mail->addAttachment("/tmp/image.jpg", "new.jpg");    // Optional name
 
         //Content
-        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->isHTML(true); 
+      
+        // Set email format to HTML
         // $mail->Name = ;
         $mail->Subject = post('name') . " " . post('subject');
         $mail->Body = sprintf(

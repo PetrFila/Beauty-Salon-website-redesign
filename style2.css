@@ -17,7 +17,9 @@
     .img-profile { grid-area: img-profile; }
     .certificates_header { grid-area: certificates_header; }
     .gallery { grid-area: gallery; }
-    .grid-container-services {grid-area: grid-container-services; }
+    .grid-container-services { grid-area: grid-container-services; }
+    .contact_details { grid-area: contact_details; }
+    .contact_form { grid-area: contact_form; }
     
     
 
@@ -30,7 +32,8 @@
         'text-profile img-profile'
         'certificates_header certificates_header'
         'gallery gallery'
-        'grid-container-services grid-container-services';
+        'grid-container-services grid-container-services'
+        'contact_details contact_form';
 
         width: 65%;
         margin: 0 auto;
@@ -201,6 +204,103 @@
     button:hover {
         background-color: pink;
         cursor: pointer;
+    }
+
+    /* CONTACT PAGE */
+
+    .contact_details {
+        grid-area: contact_details;
+        margin: 7.25% auto 0 auto;
+    }
+
+    .contact_form {
+        grid-area: contact_form;
+        justify-self: center;
+        margin-top: 20%;
+        background-color: #eee;
+
+    }
+
+    .contact_details, .contact_form {
+        width: 90%;
+    }
+
+    #contact {
+        width:80%;
+        margin: 0 auto;
+    }
+
+    #contact > div {
+       
+        margin: 0;
+        padding: 0;
+    }
+
+    .address {
+        list-style: none;
+        padding: 0;
+    }
+
+    .google_map {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: solid #8f9392 1px;
+        font-size: 100%;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        height: 300px;
+    }
+
+    #contact_name {
+        margin: 10% 0 0 0;
+    }
+
+    #contact_email {
+        margin: 10% 0 0 0;
+    }
+
+    .message, .span {
+        margin: 0 auto;
+    }
+
+    /* form validation error messages and real time validation */
+    .error{
+        display: none;
+    }		
+    .error_show, .PHPerror {
+        color: red;
+    }
+    input, textarea {
+        outline: none;
+    }
+    input.invalid, textarea.invalid{
+        border: 2px solid red;
+    }
+
+    input.valid, textarea.valid{
+        border: 2px solid green;
+    }
+
+    .success {
+        padding: 5 5;
+        background-color: limegreen;
+        text-align: center;
+        color: white;
+    }
+
+    .failure {
+        padding: 5 5;
+        background-color: lightcoral;
+        text-align: center;
+        color: white;
     }
 
 
