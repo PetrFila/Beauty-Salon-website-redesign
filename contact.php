@@ -55,12 +55,16 @@
     </div>
 
 
-    <div class="contact_details">
-
+    <div class="address_frame">
+        
         <ul class="address">
             <li>Americká 132/22</li>
             <li>350 02 Cheb</li>
         </ul>
+        
+    </div>
+    
+    <div class="contact_details">
 
         <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.646861732663!2d12.357460715850658!3d50.07417482228632!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f69100d394ad%3A0x7b0614dffcd9779d!2sAmerick%C3%A1+132%2F22%2C+350+02+Cheb%2C+Czechia!5e0!3m2!1sen!2sau!4v1529198545950" width=150% height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     
