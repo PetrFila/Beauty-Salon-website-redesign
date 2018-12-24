@@ -8,9 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Beauty Salon</title>
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
-    <link rel="stylesheet" href="style2.css">
-
-    <!--  -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
  

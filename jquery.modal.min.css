@@ -63,7 +63,7 @@
 }
 
 .modal a.close-modal:hover {
-    background-color: pink;
+    /* background-color: pink; */
     cursor: pointer;
 }
 
