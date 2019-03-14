@@ -3,7 +3,7 @@
         color: #8f9392;
     }
 
-    .menuToggle, .mobile_navigation, .nav {
+    .menuToggle, .mobile_navigation, .navbar-container-mobile {
         display: none;   
     }
 
@@ -110,23 +110,105 @@
     /* NAVIGATION BEHAVIOUR */
 
     .full_menu li {
+        display: inline-block;
         list-style: none;
         font-size: 22px;
+        margin: 0 20px 0 20px;
     }
 
     a {
-        display: inline-block;
         text-decoration: none;
-        margin: 0 20px 0 20px;
         color: #232323;
         transition: color 0.3s ease;
+    }
+
+    .navbar-container .full_menu li.active-link a {
+        color: pink;
+    }
+
+    .navbar-container-mobile > ul > li.active-link > a {
+        color: pink;
     }
 
     a:hover {
         color: pink;
     }
 
+    .underline {
+        height: 3px;
+        background-color: transparent;
+        width: 0%;
+        transition: width 0.2s, background-color 0.5s;
+        margin: 0 auto;
+    }
 
+    /* .navbar-container > ul > li .underline {
+        height: 3px;
+        background-color: transparent;
+        width: 0%;
+        transition: width 0.5s, background-color 0.5s;
+        margin: 0 auto;
+    }
+
+    .navbar-container-mobile > ul > li.active-link > a > .underline {
+        height: 3px;
+        background-color: pink;
+        width: 0;
+        transition: width 0.5s, background-color 0.5s;
+        margin: 0 auto;
+    }  */
+
+    .navbar-container ul li.active-link .underline {
+        width: 100%;
+        background-color: pink;
+    }
+
+    .navbar-container-mobile > ul > li.active-link > a > .underline {
+        width: 100%;
+        background-color: pink;
+    }
+
+    /* .navbar-container-mobile > ul > li.active-link > .underline {
+        width: 100%;
+        background-color: pink;
+       
+    } */
+
+    .navbar-container ul li:hover .underline {
+        background-color: pink;
+        width: 100%;
+       
+    }
+
+    /* .navbar-container-mobile > ul > li:hover > .underline {
+        background-color: pink;
+        width: 100%;
+       
+    } */
+
+   
+
+    .navbar-container ul li:active a {
+        transition: none;
+        color: pink;
+    }
+    
+    .navbar-container-mobile > ul > li:active > a {
+        transition: none;
+        color: pink;
+    } 
+    
+    .navbar-container ul li:active .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+    .navbar-container-mobile > ul > li:active > a > .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+  
     /* BODY TEXT AND IMAGE */
    
     .text-profile, .img-profile {
@@ -415,30 +497,40 @@
             animation-duration: .5s;
         }
     
-        .nav {
+        /* .navbar-container-mobile {
             display: block;
             width: 80%;
             margin: 0 auto;
-        }
-        
-        ul {
-            list-style-type: none;
-        }
+        } */
 
-        a {
-            
-            text-decoration: none;
+        .navbar-container-mobile {
+            display: inline-block;
+            width: 100%;
             font-size: 25px;
             color: #232323;
             transition: color 0.3s ease;
-        }
-    
-        a:hover {
-            color: pink;
+           
         }
 
-        .nav > ul > a > li {
-            margin-bottom: 40%;
+        
+        ul {
+            /* margin: 0 20px 0 20px; */
+            margin: 0 auto;
+            padding: 0;
+            list-style-type: none;
+        }
+
+
+      
+
+        a {
+         width: 100%;
+     margin: 0 auto;
+        }
+    
+        .navbar-container-mobile > ul > li {
+            margin-bottom: 15%;
+            padding: 0;
         }
 
         /* ABOUT PAGE */
