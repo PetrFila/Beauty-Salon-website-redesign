@@ -55,7 +55,7 @@
           
           </div>
 
-          <div id="mobile_navigation" class="hidden">
+          <div id="mobile_navigation_contact" class="hidden">
            
               <div class="navbar-container-mobile">
                   <ul>
@@ -129,9 +129,8 @@
                 <span class="PHPerror"><?= showError('message_error', $errors); ?></span>                                               
             </div>                  
             <!-- Submit Button -->
-            <div class="submit_button">             
-                <button class="message" type="submit">Odeslat</button>
-            </div>
+            <button class="submit_button" type="submit">Odeslat</button>
+            
         </form>
     </div>
 

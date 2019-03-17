@@ -6,16 +6,16 @@ $(document).ready(function() {
   // hanburger menu
   $(function() {
     $(".menuToggle").click(function() {
-      if ($("#mobile_navigation").hasClass("hidden")) {
-        $("#mobile_navigation").attr("class", "visible animated slideToggle");
+      if ($("#mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact").hasClass("hidden")) {
+        $("#mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact").attr("class", "visible animated slideToggle");
       } else {
-        $("#mobile_navigation").attr("class", "hidden animated slideToggle");
+        $("#mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact").attr("class", "hidden animated slideToggle");
       }
       $(this).toggleClass("open");
     });
   
     $("#mobile_navigation").click(function() {
-      if ($("#mobile_navigation").hasClass("visible")) {
+      if ($("#mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact").hasClass("visible")) {
         $(".menuToggle").toggleClass("open");
       } else {
       }

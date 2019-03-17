@@ -261,9 +261,7 @@
     }
 
     button {
-        display: block;
         padding: 10px 60px;
-       
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: normal;
@@ -342,8 +340,10 @@
     }
 
     .submit_button {
-        margin-bottom: 10%;
+        display: block;
+        margin: 0 auto 10% auto;
     }
+
 
     /* form validation error messages and real time validation */
     .error{
@@ -477,18 +477,29 @@
         * Make this absolute positioned
         * at the top left of the screen
         */
-        #mobile_navigation {
+        #mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact {
             position: absolute;
             right: 0;
             top: 0;
             width: 300px;
-            height: 100%;
             padding-top: 180px;
             background: #ededed;
             transition: 0.3s ease-in; 
         }
 
+        #mobile_navigation_index {
+            height: 100%;
+        }
 
+        #mobile_navigation_about, #mobile_navigation_contact {
+            height: 120%;
+        }
+
+        #mobile_navigation_services {
+            height: 330%;
+        }
+
+       
         .slideInRight {
             animation-duration: .5s;
         }
