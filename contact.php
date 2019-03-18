@@ -57,27 +57,27 @@
 
           <div id="mobile_navigation_contact" class="hidden">
            
-              <div class="navbar-container-mobile">
-                  <ul>
-                      <li class="nav-link">
-                          <a href="index.html">Domů
-                          </a>
-                          <div class="underline"></div>
-                      </li>
-                      <li class="nav-link">
-                          <a href="about.html">O mně</a>
-                          <div class="underline"></div>
-                      </li>
-                      <li class="nav-link">
-                          <a href="services.html">Služby</a>
-                          <div class="underline"></div>
-                      </li>
-                      <li class="nav-link active-link">
-                          <a href="contact.php">Kontakt</a>
-                          <div class="underline"></div>
-                      </li>
-                  </ul>
-              </div>
+                <div class="navbar-container-mobile">
+                    <ul class = "mobile_menu">
+                        <li class="nav-link">
+                            <a href="index.html">Domů
+                            </a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="about.html">O mně</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="services.html">Služby</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link active-link">
+                            <a href="contact.php">Kontakt</a>
+                            <div class="underline"></div>
+                        </li>
+                    </ul>
+                </div>
           </div>
           
       </div>
