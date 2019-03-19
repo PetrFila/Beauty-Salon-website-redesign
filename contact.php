@@ -13,7 +13,7 @@
 <body>
  
 <div class="container">
-
+   
     <div class="logo_div">
         <img class="logo" src="https://res.cloudinary.com/profile-avatar/image/upload/v1552560362/Beauty_Salon/Beauty_salon_logo.jpg" /> 
     </div> 
@@ -83,12 +83,19 @@
       </div>
     
     <div class="address_frame">
-        
+    
         <ul class="address">
             <li>Americká 132/22</li>
             <li>350 02 Cheb</li>
         </ul>
         
+    </div>
+
+    <div class="mailerMessages">
+        <div class="messagePossition">
+            <?= $success; ?>
+            <?= $failure; ?>
+        </div>   
     </div>
     
     <div class="contact_details">
@@ -124,7 +131,7 @@
             <!-- Message -->
             <div>
                 <label for="contact_message"></label>
-                <textarea id="contact_message" name="message" placeholder="Váše zpráva ..."><?= post('message'); ?></textarea>
+                <textarea id="contact_message" name="message" placeholder="Vaše zpráva ..."><?= post('message'); ?></textarea>
                 <span class="error">Toto pole je povinné</span>
                 <span class="PHPerror"><?= showError('message_error', $errors); ?></span>                                               
             </div>                  

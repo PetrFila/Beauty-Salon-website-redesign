@@ -19,6 +19,7 @@
     .gallery { grid-area: gallery; }
     .grid-container-services { grid-area: grid-container-services; }
     .address_frame { grid-area: address_frame; }
+    .mailerMessages { grid-area: mailerMessages; }
     .contact_details { grid-area: contact_details; }
     .contact_form { grid-area: contact_form; }
     
@@ -34,7 +35,7 @@
         'certificates_header certificates_header'
         'gallery gallery'
         'grid-container-services grid-container-services'
-        'address_frame address_frame'
+        'address_frame mailerMessages'
         'contact_details contact_form';
 
         width: 65%;
@@ -266,7 +267,7 @@
     .address_frame {
         grid-area: address_frame;
         justify-self: center;
-        width: 95%;
+        width: 90%;
     }
     
     .contact_details {
@@ -279,6 +280,17 @@
         justify-self: center;
         background-color: #eee;
 
+    }
+
+    .mailerMessages {
+        grid-area: mailerMessages;
+        margin: 0 auto;
+    }
+
+    .messagePossition {
+       height: 50%;
+       margin-top: 15%;
+       /* margin-left: 5%; */
     }
 
     .contact_details, .contact_form {
@@ -321,10 +333,6 @@
         margin: 10% 0 0 0;
     }
 
-    .message, .span {
-        margin: 0 auto;
-    }
-
     .submit_button {
         display: block;
         margin: 0 auto 10% auto;
@@ -350,17 +358,16 @@
     }
 
     .success {
-        padding: 5 5;
-        background-color: limegreen;
+        line-height: 40px;
+        /* background-color: #8BCF73; */
         text-align: center;
-        color: white;
+        color: #FFACBB;
     }
 
     .failure {
-        padding: 5 5;
-        background-color: lightcoral;
-        text-align: center;
-        color: white;
+        line-height: 40px;
+        /* background-color: lightcoral; */
+        color: red;
     }
 
 

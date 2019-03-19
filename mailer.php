@@ -60,7 +60,7 @@ if (isFormSent() && !hasErrors($errors)) {
         //Server settings
         $mail->SMTPDebug = FALSE;                             // Enable verbose debug output
         $mail->isSMTP();                                      // Set mailer to use SMTP
-        $mail->Host = "smtp.gmail.com";                       // Specify main and backup SMTP servers
+        $mail->Host = "smtp.gmail.co";                       // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
         $mail->Username = getenv('EMAIL');                    // SMTP username
         $mail->Password = getenv('PASS');                     // SMTP password
@@ -96,12 +96,13 @@ if (isFormSent() && !hasErrors($errors)) {
         $mail->send();
         // echo '<script> setTimeout(close("Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve."), 5000); </script>';
         $success =  "<span class='success'>Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve.</span>";
-        "<script> setTimeout(close($success), 5000); </script>";
+        // setTimeout(close($success), 5000);   
         $_POST = NULL;
         
     } catch (Exception $e) {
-        $failure = "<span class='failure'>Zpráva nemohla být odeslána.</span>";
-        $failure .= "<br><em>{$mail->ErrorInfo}</em>";
+        $failure = "<span class='failure'> Zpráva nemohla být odeslána.</span>";
+        // $failure .= "<br><em>{$mail->ErrorInfo}</em>";
+        // setTimeout(close($failure), 5000);
     }
     
 }
