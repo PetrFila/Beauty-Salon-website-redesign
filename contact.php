@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
  
 <div class="container">
@@ -110,21 +111,21 @@
             <!-- Name -->
             <div>
                 <label for="contact_name"></label>
-                <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= post('name'); ?>"></input>
+                <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= post('name'); ?>">
                 <span class="error">Jméno musí být vyplněné</span>
                 <span class="PHPerror"><?= showError('name_error', $errors); ?></span>
             </div>
             <!-- Email -->
             <div>
                 <label for="contact_email"></label>
-                <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= post('email'); ?>"></input>
+                <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= post('email'); ?>">
                 <span class="error">Zadaná adresa není platná</span>
                 <span class="PHPerror"><?= showError('email_error', $errors); ?></span>             
             </div>                      
             <!--Subject -->
             <div>
                 <label for="contact_subject"></label>
-                <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= post('subject'); ?>"></input>
+                <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= post('subject'); ?>">
                 <span class="error">Předmět musí být vyplněný</span>
                 <span class="PHPerror"><?= showError('subject_error', $errors); ?></span>                               
             </div>                      
@@ -137,7 +138,7 @@
             </div>                  
             <!-- Submit Button -->
             <button class="submit_button" type="submit">Odeslat</button>
-            
+         
         </form>
     </div>
 

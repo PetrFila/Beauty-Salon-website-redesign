@@ -290,7 +290,6 @@
     .messagePossition {
        height: 50%;
        margin-top: 15%;
-       /* margin-left: 5%; */
     }
 
     .contact_details, .contact_form {
@@ -359,14 +358,11 @@
 
     .success {
         line-height: 40px;
-        /* background-color: #8BCF73; */
-        text-align: center;
         color: #FFACBB;
     }
 
     .failure {
         line-height: 40px;
-        /* background-color: lightcoral; */
         color: red;
     }
 
