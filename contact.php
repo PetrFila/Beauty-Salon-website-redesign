@@ -10,56 +10,93 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
  
 <div class="container">
-
+   
     <div class="logo_div">
-        <img class="logo" src="https://mu8mjq.dm.files.1drv.com/y4m5r-mTMXFaQkbQ4CBGlPU8YyJE-rWmn1L6XM-CDNBKs1fM4KsBKpLllcGyV-egnXS19kpvpmdtG2EOUV04ebgsgBiBw_OvqIlfhVTBOQW8-OEb7gIXnLcYHwGgi2T0X5cNXS5YgXyh6LI0rX6qHaMllm69VLz2k6ro0xv59dm62qOQgAqZzGTmqkClr3kp4OGr299xPGLm9vA_NyU-IVhNw?width=373&height=373&cropmode=none" /> 
+        <img class="logo" src="https://res.cloudinary.com/profile-avatar/image/upload/v1552560362/Beauty_Salon/Beauty_salon_logo.jpg" /> 
     </div> 
 
     <div class="nav_container"> 
-        
-        
-        <ul class="full_menu">
-            <a class="nav_menu" href="index.html"><li>Domů</li></a>
-            <a class="nav_menu" href="about.html"><li>O mně</li></a>
-            <a class="nav_menu" href="services.html"><li>Služby</li></a>
-            <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
-        </ul>
-        
-        <div class="menuToggle">
-                                    
-            <!--
-            The spans to act as a hamburger menu.
-            -->
-            <span></span>
-            <span></span>
-            <span></span>
-        
-        </div>
+          
+          <div class="navbar-container">
+              <ul class="full_menu">
+                  <li class="nav-link">
+                      <a href="index.html">Domů
+                      </a>
+                      <div class="underline"></div>
+                  </li>
+                  <li class="nav-link">
+                      <a href="about.html">O mně</a>
+                      <div class="underline"></div>
+                  </li>
+                  <li class="nav-link">
+                      <a href="services.html">Služby</a>
+                      <div class="underline"></div>
+                  </li>
+                  <li class="nav-link active-link">
+                      <a href="contact.php">Kontakt</a>
+                      <div class="underline"></div>
+                  </li>
+              </ul>
+          </div>
 
-        <div id="mobile_navigation" class="hidden">
-            <div class="nav">
-                <ul>
-                    <a class="nav_menu" href="index.html"><li>Domů</li></a>
-                    <a class="nav_menu" href="about.html"><li>O mně</li></a>
-                    <a class="nav_menu" href="services.html"><li>Služby</li></a>
-                    <a class="nav_menu" href="contact.php"><li>Kontakt</li></a>
-                </ul>
-            </div>
-        </div>
+
+          
+          <div class="menuToggle">
+                                      
+              <!--
+              The spans to act as a hamburger menu.
+              -->
+              <span></span>
+              <span></span>
+              <span></span>
+          
+          </div>
+
+          <div id="mobile_navigation_contact" class="hidden">
+           
+                <div class="navbar-container-mobile">
+                    <ul class = "mobile_menu">
+                        <li class="nav-link">
+                            <a href="index.html">Domů
+                            </a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="about.html">O mně</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link">
+                            <a href="services.html">Služby</a>
+                            <div class="underline"></div>
+                        </li>
+                        <li class="nav-link active-link">
+                            <a href="contact.php">Kontakt</a>
+                            <div class="underline"></div>
+                        </li>
+                    </ul>
+                </div>
+          </div>
+          
+      </div>
     
-    </div>
-
-
     <div class="address_frame">
-        
+    
         <ul class="address">
             <li>Americká 132/22</li>
             <li>350 02 Cheb</li>
         </ul>
         
+    </div>
+
+    <div class="mailerMessages">
+        <div class="messagePossition">
+            <?= $success; ?>
+            <?= $failure; ?>
+        </div>   
     </div>
     
     <div class="contact_details">
@@ -74,35 +111,34 @@
             <!-- Name -->
             <div>
                 <label for="contact_name"></label>
-                <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= post('name'); ?>"></input>
+                <input type="text" id="contact_name" name="name" placeholder="Vaše celé jméno" value="<?= post('name'); ?>">
                 <span class="error">Jméno musí být vyplněné</span>
                 <span class="PHPerror"><?= showError('name_error', $errors); ?></span>
             </div>
             <!-- Email -->
             <div>
                 <label for="contact_email"></label>
-                <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= post('email'); ?>"></input>
+                <input type="email" id="contact_email" name="email" placeholder="Váš email" value="<?= post('email'); ?>">
                 <span class="error">Zadaná adresa není platná</span>
                 <span class="PHPerror"><?= showError('email_error', $errors); ?></span>             
             </div>                      
             <!--Subject -->
             <div>
                 <label for="contact_subject"></label>
-                <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= post('subject'); ?>"></input>
+                <input type="text" id="contact_subject" name="subject" placeholder="Předmět" value="<?= post('subject'); ?>">
                 <span class="error">Předmět musí být vyplněný</span>
                 <span class="PHPerror"><?= showError('subject_error', $errors); ?></span>                               
             </div>                      
             <!-- Message -->
             <div>
                 <label for="contact_message"></label>
-                <textarea id="contact_message" name="message" placeholder="Váše zpráva ..."><?= post('message'); ?></textarea>
+                <textarea id="contact_message" name="message" placeholder="Vaše zpráva ..."><?= post('message'); ?></textarea>
                 <span class="error">Toto pole je povinné</span>
                 <span class="PHPerror"><?= showError('message_error', $errors); ?></span>                                               
             </div>                  
             <!-- Submit Button -->
-            <div class="submit_button">             
-                <button class="message" type="submit">Odeslat</button>
-            </div>
+            <button class="submit_button" type="submit">Odeslat</button>
+         
         </form>
     </div>
 

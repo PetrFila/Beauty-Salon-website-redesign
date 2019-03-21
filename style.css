@@ -3,7 +3,7 @@
         color: #8f9392;
     }
 
-    .menuToggle, .mobile_navigation, .nav {
+    .menuToggle, .mobile_navigation, .navbar-container-mobile {
         display: none;   
     }
 
@@ -19,6 +19,7 @@
     .gallery { grid-area: gallery; }
     .grid-container-services { grid-area: grid-container-services; }
     .address_frame { grid-area: address_frame; }
+    .mailerMessages { grid-area: mailerMessages; }
     .contact_details { grid-area: contact_details; }
     .contact_form { grid-area: contact_form; }
     
@@ -34,7 +35,7 @@
         'certificates_header certificates_header'
         'gallery gallery'
         'grid-container-services grid-container-services'
-        'address_frame address_frame'
+        'address_frame mailerMessages'
         'contact_details contact_form';
 
         width: 65%;
@@ -110,23 +111,91 @@
     /* NAVIGATION BEHAVIOUR */
 
     .full_menu li {
+        display: inline-block;
         list-style: none;
         font-size: 22px;
+        margin: 0 20px 0 20px;
     }
 
     a {
-        display: inline-block;
         text-decoration: none;
-        margin: 0 20px 0 20px;
         color: #232323;
         transition: color 0.3s ease;
+    }
+
+    .navbar-container .full_menu li.active-link a {
+        color: pink;
+    }
+
+    .navbar-container-mobile ul li.active-link a {
+        color: pink;
     }
 
     a:hover {
         color: pink;
     }
 
+    .underline {
+        height: 3px;
+        background-color: transparent;
+        width: 0%;
+        transition: width 0.4s, background-color 0.5s;
+        margin: 0 auto;
+    }
 
+
+    /* visible underline under active link  */
+    .navbar-container ul li.active-link .underline {
+        width: 100%;
+        background-color: pink;
+    }
+
+    .navbar-container-mobile ul li.active-link .underline {
+        width: 100%;
+        background-color: pink;
+    }
+
+
+
+    /* displays underline when hovering over the links in the menu  */
+    .navbar-container ul li:hover .underline {
+        background-color: pink;
+        width: 100%;
+       
+    }
+
+    .navbar-container-mobile ul li:hover .underline {
+        background-color: pink;
+        width: 100%;
+       
+    }
+
+    /* keeps the underline steady -> visible without transition */
+    .navbar-container ul li:active .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+    .navbar-container-mobile ul li:active .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+
+
+    .navbar-container ul li:active a {
+        transition: none;
+        color: pink;
+    }
+    
+    .navbar-container-mobile ul li:active a {
+        transition: none;
+        color: pink;
+    } 
+    
+  
+
+  
     /* BODY TEXT AND IMAGE */
    
     .text-profile, .img-profile {
@@ -179,9 +248,7 @@
     }
 
     button {
-        display: block;
         padding: 10px 60px;
-       
         text-transform: uppercase;
         letter-spacing: 3px;
         font-weight: normal;
@@ -200,7 +267,7 @@
     .address_frame {
         grid-area: address_frame;
         justify-self: center;
-        width: 95%;
+        width: 90%;
     }
     
     .contact_details {
@@ -213,6 +280,16 @@
         justify-self: center;
         background-color: #eee;
 
+    }
+
+    .mailerMessages {
+        grid-area: mailerMessages;
+        margin: 0 auto;
+    }
+
+    .messagePossition {
+       height: 50%;
+       margin-top: 15%;
     }
 
     .contact_details, .contact_form {
@@ -255,13 +332,11 @@
         margin: 10% 0 0 0;
     }
 
-    .message, .span {
-        margin: 0 auto;
+    .submit_button {
+        display: block;
+        margin: 0 auto 10% auto;
     }
 
-    .submit_button {
-        margin-bottom: 10%;
-    }
 
     /* form validation error messages and real time validation */
     .error{
@@ -282,17 +357,13 @@
     }
 
     .success {
-        padding: 5 5;
-        background-color: limegreen;
-        text-align: center;
-        color: white;
+        line-height: 40px;
+        color: #FFACBB;
     }
 
     .failure {
-        padding: 5 5;
-        background-color: lightcoral;
-        text-align: center;
-        color: white;
+        line-height: 40px;
+        color: red;
     }
 
 
@@ -371,7 +442,7 @@
         }
 
         .menuToggle {
-            top: 100px;
+            top: 60px;
             right: 100px;
         }
 
@@ -395,18 +466,29 @@
         * Make this absolute positioned
         * at the top left of the screen
         */
-        #mobile_navigation {
+        #mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact {
             position: absolute;
             right: 0;
             top: 0;
             width: 300px;
-            height: 100%;
             padding-top: 180px;
             background: #ededed;
             transition: 0.3s ease-in; 
         }
 
+        #mobile_navigation_index {
+            height: 100%;
+        }
 
+        #mobile_navigation_about, #mobile_navigation_contact {
+            height: 120%;
+        }
+
+        #mobile_navigation_services {
+            height: 330%;
+        }
+
+       
         .slideInRight {
             animation-duration: .5s;
         }
@@ -415,31 +497,20 @@
             animation-duration: .5s;
         }
     
-        .nav {
-            display: block;
-            width: 80%;
-            margin: 0 auto;
+        .navbar-container-mobile {
+            display: inline-block;
+            width: 100%;
+            color: #232323;
         }
         
-        ul {
-            list-style-type: none;
-        }
-
-        a {
-            
-            text-decoration: none;
+        
+        .mobile_menu li {
+            display: inline-block;
+            list-style: none;
             font-size: 25px;
-            color: #232323;
-            transition: color 0.3s ease;
-        }
-    
-        a:hover {
-            color: pink;
+            margin: 30px 20px 0 40px;
         }
 
-        .nav > ul > a > li {
-            margin-bottom: 40%;
-        }
 
         /* ABOUT PAGE */
         .gallery {
@@ -464,11 +535,9 @@
 
         .contact_form {
             margin-top: 3%;
-        }
-
-        
+        } 
+    
     }
-
  
     /* Pixel 2XL landscape mode */
     @media screen and (max-width: 850px) {
