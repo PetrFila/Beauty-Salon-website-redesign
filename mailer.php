@@ -96,12 +96,14 @@ if (isFormSent() && !hasErrors($errors)) {
         $mail->send();
         // echo '<script> setTimeout(close("Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve."), 5000); </script>';
         $success =  "<span class='success'>Děkuji, Vaše zpráva byla odeslána. Ozvu se Vám co nejdříve.</span>";
-        // setTimeout(close($success), 5000);   
+        // set_time_limit(5, $seconds);  
         $_POST = NULL;
         
     } catch (Exception $e) {
         $failure = "<span class='failure'> Zpráva nemohla být odeslána.</span>";
         // $failure .= "<br><em>{$mail->ErrorInfo}</em>";
+        // set_time_limit(5, $seconds);  
+
         // setTimeout(close($failure), 5000);
     }
     

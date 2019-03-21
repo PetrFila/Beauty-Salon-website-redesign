@@ -54,6 +54,9 @@ $(document).ready(function() {
     }
    
   });
+
+  $(".success").fadeOut(8000);
+  $(".failure").fadeOut(6000);
   
 });
 
