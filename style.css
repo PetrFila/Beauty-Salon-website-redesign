@@ -433,7 +433,7 @@
         .hidden {
             opacity: 0;
             transition-delay: .5s;
-            pointer-events: none;s
+            pointer-events: none;
             cursor: default;
         }
         
@@ -535,11 +535,9 @@
 
         .contact_form {
             margin-top: 3%;
-        }
-
-        
+        } 
+    
     }
-
  
     /* Pixel 2XL landscape mode */
     @media screen and (max-width: 850px) {

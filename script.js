@@ -24,7 +24,6 @@ $(document).ready(function() {
     $("#contact_subject").on("input", function() {
       var input=$(this);
       var subject=$(this).val();
-      console.log(subject);
       if(subject){input.removeClass("invalid").addClass("valid");}
       else{input.removeClass("valid").addClass("invalid");}	
     });
@@ -33,7 +32,6 @@ $(document).ready(function() {
     $('#contact_message').keyup(function(event) {
       var input=$(this);
       var message=$(this).val();
-      console.log(message);
       if(message){input.removeClass("invalid").addClass("valid");}
       else{input.removeClass("valid").addClass("invalid");}	
     });
