@@ -1,618 +1,687 @@
-body {
-    font-family: "Avenir Next", "Avenir", sans-serif;
-    color: #8f9392;
-}
-
-
-/* HEADER AND NAVIGATION CONTAINERS LAYOUT */
-
-header {
-display: grid;
-justify-items: center;
-}
-.nav_container {
-    grid-area: 1 / 2 / 2 / 3;
-    
-}
-
-
-/* LOGO AND NAVIGATION BEHAVIOUR */
-
-.logo {
-    width: 150px;
-    height: auto;
-}
-
-#menu {
-    margin-top: 50px;
-}
-
-.nav_menu {
-    display: inline-block;
-}
-
-a {
-    text-decoration: none;
-    padding: 10px 20px;
-    color: #232323;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: pink;
-}
-
-
-/* BODY CONTAINERS */
-.body {
-    /* Need this setup for index page body */
-    display: grid;
-    justify-items: center;
-  
-}
-
-#mobile_navigation {
-    display: none;
-}
-
-#menuToggle input {
-    display: none;
-}
-
-
-/* INDEX PAGE name of the lady */
-h1 {
-    text-align: center;
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-}
-
-.fullScreenHeader {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
-     display: none;
-}
-
-#menu li {
-    list-style: none;
-    font-size: 22px;
-}
-
-
-/* INDEX PAGE under the name  */
-.makeup_artist {
-    margin: 20px 0;
-    padding: 0;
-    text-align: center;
-    letter-spacing: 15px;
-}
-
-
-/*   ABOUT PAGE */
-.body-grid {
-    display: grid;
-    grid-template-columns: 44%;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-    
-}
-.text-profile {
-    grid-column: 1;
-    grid-row: 1;
-}
-.img-profile {
-    grid-column: 2;
-    grid-row: 1 / 3;
-}
-.certificates {
-    grid-column: 1;
-    grid-row: 2;
-}
-
-.text-profile > p, .certificates > p {
-    width: 80%;
-    margin: 0 auto;
-    text-align: justify;
-    text-justify: inter-character;
-}
-
-.gallery {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    
-}
-
-.text-profile > p {
-    padding-top: 8%;
-}
-
-.img-profile > img {
-    margin-top: 10%;
-}
-
-.certificates > p, .gallery > a > img {
-    padding-top: 5%;
-}
-
-.makeup_artist_mobile {
-    display: none;
-}
-
-
-/* SERVICES PAGE */
-
-.body-services {
-    display: block;
-    width: 60%;
-    margin: 100px auto 0 auto;
-}
-
-.grid-container-services {
-    
-    display: grid;
-    grid-template-columns: auto auto auto;
-    width: 99%;
-    grid-column-gap: 5px;
-    /* grid-row-gap: -20px;*/
-    justify-content: center; 
-    background: pink;
-}
-
-
-.front > img {
-    display: inline-block;
-    width: 100%;
-    height: auto;
-}
-
-.front > h3, .back > p {
-    text-align: center;
-}
-
-.back {
-    display: none;
-}
-
-
-/* CONTACT PAGE grid */
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    /* background-color: burlywood; */
-}
-
-.contact_details {
-    grid-column: 1;
-    grid-row: 1;
-    width: 100%;
-    background-color: cadetblue;
-}
-
-.google_map {
-    width: 100%;
-}
-
-.contact_form {
-    grid-column: 2;
-    grid-row: 1;
-    width: 100%;
-    padding: 50px 0;
-    background-color: #eee;
-
-}
-
-input, textarea {
-    margin-left: 15%;
-    border: solid #8f9392 1px;
-    font-size: 100%;
-}
-span {
-    margin-left: 15%;
-}
-input, textarea {
-    width: 70%;
-}
-input {
-    height: 30px;
-}
-textarea {
-    height: 300px;
-}
-
-button {
-    display: block;
-    padding: 10px 60px;
-    margin: 0 auto;
-    text-transform: uppercase;
-    font-weight: normal;
-    color: white;
-    background: #444;
-}
-
-button:hover {
-    background-color: pink;
-    cursor: pointer;
-}
-
-/* form validation error messages and real time validation */
-.error{
-	display: none;
-}		
-.error_show, .PHPerror {
-	color: red;
-}
-input, textarea {
-    outline: none;
-}
-input.invalid, textarea.invalid{
-	border: 2px solid red;
-}
-
-input.valid, textarea.valid{
-	border: 2px solid green;
-}
-
-.success {
-    padding: 5 5;
-    background-color: limegreen;
-    text-align: center;
-    color: white;
-}
-
-.failure {
-    padding: 5 5;
-    background-color: lightcoral;
-    text-align: center;
-    color: white;
-}
-
-
-
-  
-
-
-
-@media screen and (max-width: 1300px) {
-
-    body
-    {
-    margin: 0;
-    padding: 0;
-    /* background: #232323; */
+    body {
+        font-family: "Avenir Next", "Avenir", sans-serif;
+        color: #8f9392;
     }
 
-    .full_menu {
+    .menuToggle, .mobile_navigation, .navbar-container-mobile {
+        display: none;   
+    }
+
+    
+    /* MAIN LAYOUT - 2 COLUMNS */
+
+    .logo_div { grid-area: logo_div; }
+    .nav_container { grid-area: nav_container; }
+    .index_body { grid-area: index_body; }
+    .text-profile { grid-area: text-profile; }
+    .img-profile { grid-area: img-profile; }
+    .certificates_header { grid-area: certificates_header; }
+    .gallery { grid-area: gallery; }
+    .grid-container-services { grid-area: grid-container-services; }
+    .address_frame { grid-area: address_frame; }
+    .mailerMessages { grid-area: mailerMessages; }
+    .contact_details { grid-area: contact_details; }
+    .contact_form { grid-area: contact_form; }
+    
+    
+
+    .container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        'logo_div nav_container'
+        'index_body index_body'
+        'text-profile img-profile'
+        'certificates_header certificates_header'
+        'gallery gallery'
+        'grid-container-services grid-container-services'
+        'address_frame mailerMessages'
+        'contact_details contact_form';
+
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    
+    /* INDEX PAGE */
+
+    .index_body { 
+        grid-area: index_body;
+        justify-self: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: 'Great Vibes', cursive;
+        font-size: 60px;
+    }
+
+    .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
         display: none;
-    }
-    
-    .logo{
-        display: block;
-        width: 100px;
-        margin: 5% 0 0 -30%;
-    }
-
-    a
-    {
-    text-decoration: none;
-    color: #232323;
-    
-    transition: color 0.3s ease;
-    }
-
-    a:hover
-    {
-    color: pink;
-    }
-
-    /* Hamburger menu */
-    .menuToggle {
-        display: block;
-        position: absolute;
-        float: right;
-        right: 10%;
-        top: 5%;
-        width: 33px;
-        height: 33px;
-        padding: 5px;
-        z-index: 1;
-        cursor: pointer;
-      }
-      
-      .menuToggle span {
-        display: block;
-        width: 33px;
-        height: 4px;
-        background: #8f9392;
-        border-radius: 3px;
-        margin-bottom: 5px;
-        cursor: pointer;
-        transition: .7s ease;
-      }
-      
-      .hidden {
-        opacity: 0;
-        transition-delay: .5s;
-        pointer-events: none;
-        cursor: default;
-      }
-      
-      .visible {
-        opacity: 1;
-        
-      }
-      
-      /* Transform all the slices of hamburger into a crossmark */
-      .menuToggle.open span:nth-child(1) {
-        opacity: 1;
-        transform: rotate(45deg) translate(0, 13px);
-      }
-      
-      .menuToggle.open span:nth-child(2) {
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-      }
-      
-      .menuToggle.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(0, -13px);
-      }
-      
-      /* Navigation pop up block */
-      /*
-    * Make this absolute positioned
-    * at the top left of the screen
-    */
-      #mobile_navigation {
-        position: absolute;
-        right: 0;
-        top: 0;
-        display: block;
-        width: 300px;
-        height: 100%;
-        justify-content: center;
-        padding-top: 140px;
-        padding-bottom: 800px;
-        background: #ededed;
-        list-style-type: none;
-        font-size: 25px;
-        transition: 0.3s ease-in; 
-      }
-            
-      .slideInRight {
-        animation-duration: .5s;
-      }
-      
-      .slideOutRight {
-        animation-duration: .5s;
-      }
-
-      .nav {
-          width: 80%;
-          margin: auto;
-      }
-      
-      ul {
-        list-style-type: none;
-      }
-
-         
-  
-      
-    /* ABOUT PAGE */
-    .body {
-       margin-top: 100px;
-   }
-   .main_img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  
-   }
-
-    .body-grid {
-    display: grid;
-    grid-template-columns: 44%;
-    grid-template-rows: auto auto auto;
-    justify-content: center;
-   
-    }
-    .text-profile {
-        grid-column: 1;
-        grid-row: 1;
-    }
-    .img-profile {
-        grid-column: 2;
-        grid-row: 1 / 3;
-    }
-    .certificates {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .text-profile > p, .certificates > p {
-        width: 80%;
-        margin: 0 auto;
-        text-align: justify;
-        text-justify: inter-character;
-    }
-
-    .gallery {
-        display: block;
-        width: 80%;
-        margin: 0 auto;
-    
-    }
-
-    .text-profile > p {
-        padding-top: 10%;
-    }
-
-    .img-profile > img {
-        width: 90%;
-        height: auto;
-        margin-top: 10%;
-    }
-
-    .certificates > p, .gallery > a > img {
-        padding-top: 5%;
     }
 
     .makeup_artist_mobile {
         display: none;
     }
 
-   
- 
-}
-
-
-@media screen and (max-width: 1200px) {
-   
-    /* CONTACT PAGE */
-
-.contact-grid {
-    display: block;
-    /* grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-items: center; */
-    /* background-color: burlywood; */
-}
-
-.contact_details {
-    /* grid-column: 1;
-    grid-row: 1; */
-    width: 100%;
-    padding: 0 0 90px 0;
-    background-color: cadetblue;
-}
-
-.google_map {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.contact_form {
-    /* grid-column: 2;
-    grid-row: 1; */
-    width: 100%;
-    padding: 50px 0;
-    background-color: #eee;
-
-}  
-}
-
-/* iPad  */
-@media screen and (max-width: 771px) {
-   
-    .main_img {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* smart phones landscape mode and lower resolution */
-@media screen and (max-width: 639px) {
-    .logo{
-        display: block;
-        width: 100px;
-        margin: 5% 0 0 -30%;
-    }
-    .body-grid {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-    }
-    .text-profile, .img-profile, .certificates {
-        width: 90%;
-        margin: 0 auto;
-        text-align: justify;
-        text-justify: inter-character;
-    }
-    .gallery {
-        display: block;
-        width: 90%;
-        margin: 0 auto;
-    }
-    .text-profile > p {
-        width: 90%;
-        margin: 0 auto;
-    }
-
-    .img-profile > img {
-        width: 90%;
-        height: auto;
-        margin: 10% 0 0 5%;
-    }
-
-    .certificates > p, .gallery > a > img {
-        padding-top: 5%;
-    }
-    .certificates > p, .gallery > a > img {
-        margin: 0 5% 0 5%;
-    }
-}
-
-@media screen and (max-width: 599px) {
-   
     .fullScreenHeader {
-        display: none;
-    }
-
-    .mobileScreenHeader {
-        display: block;
-    }
-
-    .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
-        display: block;
         width: 100%;
-        margin: auto 0;
-    }
-    
-    .makeup_artist {
-        display: none;
+        margin: 10% 0 0 0;
+        padding: 0;
     }
 
-    .makeup_artist_mobile, .p_line_break {
+   
+    /* INDEX PAGE under the name  */
+    .makeup_artist {
+        margin: 20px 0;
+        padding: 0;
         text-align: center;
         letter-spacing: 15px;
     }
 
-    .makeup_artist_mobile {
-        padding: 4% 0 1% 0;
+
+    
+
+    /*  ABOUT PAGE */
+    .logo_div {
+        grid-area: logo_div;
+        align-self: center;
     }
 
-    .p_line_break {
-        padding: 1% 0 4% 0;
+    .logo {
+        width: 100px;
+        margin: 10% 5% 0 5%;
+    }
+
+    .nav_container {
+        grid-area: nav_container;
+        align-self: center;
+        justify-self: right;
+        margin: 10% 5% 0 0;
     }
 
     .gallery {
+        grid-area: gallery;
+        align-self: center;
+        justify-self: center;
+    }
+
+  
+
+    /* NAVIGATION BEHAVIOUR */
+
+    .full_menu li {
+        display: inline-block;
+        list-style: none;
+        font-size: 22px;
+        margin: 0 20px 0 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #232323;
+        transition: color 0.3s ease;
+    }
+
+    .navbar-container .full_menu li.active-link a {
+        color: pink;
+    }
+
+    .navbar-container-mobile ul li.active-link a {
+        color: pink;
+    }
+
+    a:hover {
+        color: pink;
+    }
+
+    .underline {
+        height: 3px;
+        background-color: transparent;
+        width: 0%;
+        transition: width 0.4s, background-color 0.5s;
+        margin: 0 auto;
+    }
+
+
+    /* visible underline under active link  */
+    .navbar-container ul li.active-link .underline {
         width: 100%;
-        margin: auto;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .logo {
-        display: block;
-        width: 80px;
-        margin: 5% 0 0 -30%;
+        background-color: pink;
     }
 
-    #menuToggle input:checked ~ ul
-    {
-    transform: translate(25%, 0);
+    .navbar-container-mobile ul li.active-link .underline {
+        width: 100%;
+        background-color: pink;
     }
+
+
+
+    /* displays underline when hovering over the links in the menu  */
+    .navbar-container ul li:hover .underline {
+        background-color: pink;
+        width: 100%;
+       
+    }
+
+    .navbar-container-mobile ul li:hover .underline {
+        background-color: pink;
+        width: 100%;
+       
+    }
+
+    /* keeps the underline steady -> visible without transition */
+    .navbar-container ul li:active .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+    .navbar-container-mobile ul li:active .underline {
+        transition: none;
+        background-color: pink;
+    }
+
+
+
+    .navbar-container ul li:active a {
+        transition: none;
+        color: pink;
+    }
+    
+    .navbar-container-mobile ul li:active a {
+        transition: none;
+        color: pink;
+    } 
+    
+  
+
+  
+    /* BODY TEXT AND IMAGE */
    
-}
+    .text-profile, .img-profile {
+        margin-top: 15%;
+    }
+
+    .text-profile > p {
+        width: 90%;
+        margin: 0 auto;
+        text-align: justify;
+        text-justify: inter-character;
+    }
+
+    .img-profile > img {
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+    }
+
+    .certificates_header > p {
+        width: 90%;
+        margin: 2% 2%;
+    }
+    
+    
+    /* SERVICES PAGE */
+  
+    .grid-container-services {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .front{
+        text-align: center;
+
+    }
+
+    .front > img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+    }
+
+    .back {
+        display: none;
+    }
+
+    button {
+        padding: 10px 60px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: normal;
+        color: white;
+        background: #444;
+    }
+    
+    button:hover {
+        background-color: pink;
+        cursor: pointer;
+    }
+
+    
+    /* CONTACT PAGE */
+
+    .address_frame {
+        grid-area: address_frame;
+        justify-self: center;
+        width: 90%;
+    }
+    
+    .contact_details {
+        grid-area: contact_details;
+        margin: 0 auto;
+    }
+
+    .contact_form {
+        grid-area: contact_form;
+        justify-self: center;
+        background-color: #eee;
+
+    }
+
+    .mailerMessages {
+        grid-area: mailerMessages;
+        margin: 0 auto;
+    }
+
+    .messagePossition {
+       height: 50%;
+       margin-top: 15%;
+    }
+
+    .contact_details, .contact_form {
+        width: 90%;
+    }
+
+    #contact {
+        width:80%;
+        margin: 0 auto;
+    }
+
+    .address {
+        list-style: none;
+        padding: 0;
+    }
+
+    .google_map {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 100%;
+        border: solid #8f9392 1px;
+        font-size: 100%;
+    }
+
+    input {
+        height: 30px;
+    }
+
+    textarea {
+        height: 300px;
+    }
+
+    #contact_name {
+        margin-top: 10%;
+    }
+
+    #contact_email {
+        margin: 10% 0 0 0;
+    }
+
+    .submit_button {
+        display: block;
+        margin: 0 auto 10% auto;
+    }
+
+
+    /* form validation error messages and real time validation */
+    .error{
+        display: none;
+    }		
+    .error_show, .PHPerror {
+        color: red;
+    }
+    input, textarea {
+        outline: none;
+    }
+    input.invalid, textarea.invalid{
+        border: 2px solid red;
+    }
+
+    input.valid, textarea.valid{
+        border: 2px solid green;
+    }
+
+    .success {
+        line-height: 40px;
+        color: #FFACBB;
+    }
+
+    .failure {
+        line-height: 40px;
+        color: red;
+    }
 
 
 
+    @media screen and (max-width: 1650px) {
+        .container {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
 
+    @media screen and (max-width: 1550px) {
+        .container {
+            width: 75%;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 1500px) {
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        .main_img {
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 1300px) {
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .full_menu {
+            display: none;
+        }
+
+    
+        /* Hamburger menu */
+        .menuToggle {
+            display: block;
+            position: absolute;
+            right: 12%;
+            top: 7%;
+            width: 33px;
+            height: 33px;
+            padding: 5px;
+            z-index: 1;
+            cursor: pointer;
+        }
+        
+        .menuToggle span {
+            display: block;
+            width: 33px;
+            height: 4px;
+            background: #8f9392;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            transition: .7s ease;
+        }
+        
+        .hidden {
+            opacity: 0;
+            transition-delay: .5s;
+            pointer-events: none;
+            cursor: default;
+        }
+        
+        .visible {
+            opacity: 1;
+        }
+
+        .menuToggle {
+            top: 60px;
+            right: 100px;
+        }
+
+        /* Transform all the slices of hamburger into a crossmark */
+        .menuToggle.open span:nth-child(1) {
+            opacity: 1;
+            transform: rotate(45deg) translate(0, 13px);
+        }
+        
+        .menuToggle.open span:nth-child(2) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        .menuToggle.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(0, -13px);
+        }
+
+        /* Navigation pop up block */
+        /*
+        * Make this absolute positioned
+        * at the top left of the screen
+        */
+        #mobile_navigation_index, #mobile_navigation_about, #mobile_navigation_services, #mobile_navigation_contact {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 300px;
+            padding-top: 180px;
+            background: #ededed;
+            transition: 0.3s ease-in; 
+        }
+
+        #mobile_navigation_index {
+            height: 100%;
+        }
+
+        #mobile_navigation_about, #mobile_navigation_contact {
+            height: 120%;
+        }
+
+        #mobile_navigation_services {
+            height: 330%;
+        }
+
+       
+        .slideInRight {
+            animation-duration: .5s;
+        }
+        
+        .slideOutRight {
+            animation-duration: .5s;
+        }
+    
+        .navbar-container-mobile {
+            display: inline-block;
+            width: 100%;
+            color: #232323;
+        }
+        
+        
+        .mobile_menu li {
+            display: inline-block;
+            list-style: none;
+            font-size: 25px;
+            margin: 30px 20px 0 40px;
+        }
+
+
+        /* ABOUT PAGE */
+        .gallery {
+            grid-area: gallery;
+            align-self: center;
+            justify-self: center;
+        
+        }
+
+        .gallery > a {
+            margin: 0;
+            
+        }
+        
+        
+        /* CONTACT PAGE */
+
+        .contact_details {
+            grid-area: contact_details;
+            margin: 3% auto 0 auto;
+        }
+
+        .contact_form {
+            margin-top: 3%;
+        } 
+    
+    }
+ 
+    /* Pixel 2XL landscape mode */
+    @media screen and (max-width: 850px) {
+        .grid-container-services {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            width: 100%;
+            margin-top: 15%;
+        }
+
+        .menuToggle {
+            top: 60px;
+            right: 70px;
+        }
+
+        .front > h3 {
+            font-weight: normal;
+        }
+    }
+
+    /* iPhoneX landscape mode */
+    @media screen and (max-width: 812px) {
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+                'logo_div nav_container'
+                'index_body index_body'
+                'text-profile img-profile'
+                'certificates_header certificates_header'
+                'gallery gallery'
+                'grid-container-services grid-container-services'
+                'address_frame address_frame'
+                'contact_details contact_details' 
+                'contact_form contact_form';
+            }
+    }
+
+    @media screen and (max-width: 550px) {
+        .container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas:
+                'logo_div nav_container'
+                'index_body index_body'
+                'img-profile img-profile'
+                'text-profile text-profile'
+                'certificates_header certificates_header'
+                'gallery gallery'
+                'grid-container-services grid-container-services'
+                'address_frame address_frame'
+                'contact_details contact_details' 
+                'contact_form contact_form';
+        }
+
+        .menuToggle {
+            top: 50px;
+            right: 50px;
+        }
+
+      
+        .logo {
+            width: 80px;
+          
+        }
+
+        .main_img,.text-profile > p, .img-profile > img, .certificates_header > p {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .fullScreenHeader, .makeup_artist {
+            display: none;
+        }
+
+        .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+            display: block;
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+
+        .mobile_screen_first_name {
+            margin: 20% 0 0 0;
+        }
+
+        .makeup_artist_mobile, .p_line_break {
+            letter-spacing: 15px;
+        }
+
+        .makeup_artist_mobile {
+            padding: 4% 0 1% 0;
+        }
+
+        .p_line_break {
+            padding: 2% 0 4% 0;
+        }
+
+        .text-profile, .certificates_header, .img-profile {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .img-profile {
+            margin-top: 15%;
+        }
+
+        .text-profile {
+            margin-top: 5%;
+        }
+
+        .certificates_header > p {
+            margin: 15% 0 5% 0;
+        }
+
+        .gallery {
+            width: 80%;
+            
+        }
+    
+        .grid-container-services {
+            display: grid;
+            grid-template-columns: auto;
+            grid-row-gap: 5px;
+            width: 80%;
+            margin-top: 20%;
+        }
+       
+        .grid-container-services {
+            grid-area: grid-container-services;
+            justify-self: center;
+         
+        }
+
+
+    }
+
+    @media screen and (max-width: 340px) {
+        .img-profile, .text-profile, .certificates_header, .gallery {
+            width: 90%;
+        }
+    }
+
+
+  

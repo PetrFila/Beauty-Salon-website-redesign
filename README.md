@@ -44,10 +44,6 @@ Installing PHPdotenv package
 
 
 Issues:
-- `backface-visibility: hidden;` doesn't work on Mozilla for some reason even with prefix `-moz-backface-visibility: hidden;`
-
-- needed to use prefix for Safari and mobile browsers
-`-webkit-backface-visibility: hidden;`
 
 - I couldn't make dotenv file work. The script reads the file .env but the credentials are wrong. 
 
@@ -55,5 +51,8 @@ Issues:
 
 - complete redesign of the service page. Original design contained flipping cards but they had to be replaced with modal style of overlay pop up windows which works well.
 
+- the front end validation code had to be placed as first in the JQuery script file separated from the other unrelated code otherwise it wouldn't work properly.
+
 Frontend form validation taken from this tutorial:
 https://formden.com/blog/validate-contact-form-jquery
+
