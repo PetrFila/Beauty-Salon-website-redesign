@@ -3,6 +3,9 @@ This is a small project to redesign a static website.
 Current website:
 www.vizazistka-promeny.cz
 
+![alt text](https://res.cloudinary.com/profile-avatar/image/upload/v1553168068/Beauty_Salon/vizazistka_old.png)
+
+
 Preview of the new website:
 https://vizazistka-promeny.herokuapp.com/index.html
 
