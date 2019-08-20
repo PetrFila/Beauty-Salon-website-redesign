@@ -19,6 +19,8 @@
     .gallery { grid-area: gallery; }
     .grid-container-services { grid-area: grid-container-services; }
     .address_frame { grid-area: address_frame; }
+    .address { grid-area: address;}
+    .phone { grid-area: phone; }
     .mailerMessages { grid-area: mailerMessages; }
     .contact_details { grid-area: contact_details; }
     .contact_form { grid-area: contact_form; }
@@ -40,6 +42,13 @@
 
         width: 65%;
         margin: 0 auto;
+    }
+
+    .address_frame {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas:           
+            'address phone';
     }
 
     
@@ -269,6 +278,12 @@
         justify-self: center;
         width: 90%;
     }
+
+
+    .phone {
+        grid-area: phone;
+        justify-self: left;
+    }
     
     .contact_details {
         grid-area: contact_details;
@@ -301,9 +316,14 @@
         margin: 0 auto;
     }
 
-    .address {
+    .address, .phone {
         list-style: none;
         padding: 0;
+    }
+
+    .address_pointer, .phone_icon {
+        width: 15px;
+        height: auto;
     }
 
     .google_map {
@@ -532,6 +552,11 @@
             grid-area: contact_details;
             margin: 3% auto 0 auto;
         }
+
+        /* .address_frame {
+            grid-area: address_frame;
+
+        } */
 
         .contact_form {
             margin-top: 3%;

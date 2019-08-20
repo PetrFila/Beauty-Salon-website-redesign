@@ -84,13 +84,19 @@
       </div>
     
     <div class="address_frame">
-    
+            
         <ul class="address">
+            <li><img class="address_pointer" src="/images/placeholder-filled-point.png" /></li>
             <li>Americká 000/00</li>
             <li>000 00 Cheb</li>
-            <li>+000 000 000 000</li>
         </ul>
-        
+
+
+        <ul class="phone">
+            <li><img class="phone_icon" src="/images/smartphone-call.png" /></li>
+            <li>+000 000 000 000</li>
+        </ul>   
+          
     </div>
 
     <div class="mailerMessages">
