@@ -86,9 +86,9 @@
     <div class="address_frame">
     
         <ul class="address">
-            <li>Americká 132/22</li>
-            <li>350 02 Cheb</li>
-            <li>+420 774 102 836</li>
+            <li>Americká 000/00</li>
+            <li>000 00 Cheb</li>
+            <li>+000 000 000 000</li>
         </ul>
         
     </div>
