@@ -626,16 +626,9 @@
             margin: 20% 0 0 0;
         }
 
-        .makeup_artist_mobile, .p_line_break {
-            letter-spacing: 15px;
-        }
-
         .makeup_artist_mobile {
-            padding: 4% 0 1% 0;
-        }
-
-        .p_line_break {
-            padding: 2% 0 4% 0;
+            margin: 20px 0;
+            letter-spacing: 12px;
         }
 
         .text-profile, .certificates_header, .img-profile {
@@ -680,6 +673,10 @@
     @media screen and (max-width: 340px) {
         .img-profile, .text-profile, .certificates_header, .gallery {
             width: 90%;
+        }
+
+        .makeup_artist_mobile {
+            letter-spacing: 8px;
         }
     }
 
