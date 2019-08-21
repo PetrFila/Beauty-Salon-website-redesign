@@ -316,7 +316,7 @@
         margin: 0 auto;
     }
 
-    .address, .phone {
+    .address, .phone, .social_media {
         list-style: none;
         padding: 0;
     }
@@ -328,6 +328,20 @@
 
     .google_map {
         width: 100%;
+    }
+
+    .social_media {
+        justify-content: center;
+        display: flex;
+    }
+
+    .social_media li {
+        margin: 0 20px;
+    }
+
+    .facebook:hover, .instagram:hover {
+        fill: pink;
+        cursor: pointer;
     }
 
     input, textarea {
@@ -552,11 +566,6 @@
             grid-area: contact_details;
             margin: 3% auto 0 auto;
         }
-
-        /* .address_frame {
-            grid-area: address_frame;
-
-        } */
 
         .contact_form {
             margin-top: 3%;
