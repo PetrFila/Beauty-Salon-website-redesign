@@ -169,7 +169,10 @@
          
         </form>
     </div>
-
+    <div class="footer">
+        <div class="footerLine"></div>
+        <p class="webmaster">&copy; 2019, Designed and developed by <a class="webmaster_link" href="https://github.com/PetrFila">Petr Fila</a> | peter.fila@hotmail.co.uk </p>
+    </div>
 
 </div>
 

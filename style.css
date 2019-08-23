@@ -24,6 +24,7 @@
     .mailerMessages { grid-area: mailerMessages; }
     .contact_details { grid-area: contact_details; }
     .contact_form { grid-area: contact_form; }
+    .footer { grid-area: footer; }
     
     
 
@@ -38,7 +39,8 @@
         'gallery gallery'
         'grid-container-services grid-container-services'
         'address_frame mailerMessages'
-        'contact_details contact_form';
+        'contact_details contact_form'
+        'footer footer';
 
         width: 65%;
         margin: 0 auto;
@@ -49,6 +51,27 @@
         grid-template-columns: 50% 50%;
         grid-template-areas:           
             'address phone';
+    }
+
+    .footerLine {
+        width: 100%;
+        height: 1px;
+        margin: 20px auto 0 auto;
+        background: #8f9392;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .webmaster {
+        margin: 10px auto 0 auto;
+        font-size: 8px;
+        color: #8f9392;
+    }
+
+    .webmaster_link {
+        color: #8f9392;
     }
 
     
@@ -65,13 +88,10 @@
         font-size: 60px;
     }
 
-    .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+    .mobile_screen_first_name, .mobile_screen_second_name, .p_line_break {
         display: none;
     }
 
-    .makeup_artist_mobile {
-        display: none;
-    }
 
     .fullScreenHeader {
         width: 100%;
@@ -256,6 +276,11 @@
         display: none;
     }
 
+    .fbPlaceholder {
+        width: 440px; 
+        height: 660px;
+    }
+
     button {
         padding: 10px 60px;
         text-transform: uppercase;
@@ -337,6 +362,11 @@
 
     .social_media li {
         margin: 0 20px;
+    }
+
+    .facebook, .instagram {
+        fill: #444;
+
     }
 
     .facebook:hover, .instagram:hover {
@@ -608,7 +638,8 @@
                 'grid-container-services grid-container-services'
                 'address_frame address_frame'
                 'contact_details contact_details' 
-                'contact_form contact_form';
+                'contact_form contact_form'
+                'footer footer';
             }
     }
 
@@ -626,7 +657,8 @@
                 'grid-container-services grid-container-services'
                 'address_frame address_frame'
                 'contact_details contact_details' 
-                'contact_form contact_form';
+                'contact_form contact_form'
+                'footer footer';
         }
 
         .menuToggle {
@@ -645,11 +677,11 @@
             margin: 0 auto;
         }
 
-        .fullScreenHeader, .makeup_artist {
+        .fullScreenHeader {
             display: none;
         }
 
-        .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist_mobile, .p_line_break {
+        .mobile_screen_first_name, .mobile_screen_second_name, .makeup_artist, .p_line_break {
             display: block;
             width: 100%;
             margin: 0;
@@ -660,7 +692,7 @@
             margin: 20% 0 0 0;
         }
 
-        .makeup_artist_mobile {
+        .makeup_artist {
             margin: 20px 0;
             letter-spacing: 12px;
         }
@@ -709,7 +741,7 @@
             width: 90%;
         }
 
-        .makeup_artist_mobile {
+        .makeup_artist {
             letter-spacing: 8px;
         }
     }
